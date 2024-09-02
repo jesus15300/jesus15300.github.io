@@ -8,6 +8,7 @@ html {
     background-color: pink;
     font-family: 'Barbie', sans-serif;
     font-size: 36px;
+    max-width:100%;
     overflow-x: hidden;
 }
 
