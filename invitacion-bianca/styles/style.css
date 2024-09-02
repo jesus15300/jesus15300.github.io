@@ -8,11 +8,13 @@ html {
     background-color: pink;
     font-family: 'Barbie', sans-serif;
     font-size: 36px;
+    overflow-x: hidden;
 }
 
 /* Estilo para cada sección */
 .section {
     height: 100vh;
+    max-width: 100%;
     /* Ocupa toda la pantalla */
     display: flex;
     align-items: center;
