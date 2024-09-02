@@ -1,0 +1,205 @@
+/* Estilos generales */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    background-color: pink;
+    font-family: 'Barbie', sans-serif;
+    font-size: 36px;
+}
+
+/* Estilo para cada sección */
+.section {
+    height: 100vh;
+    /* Ocupa toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Colores y fondos */
+.section-1 {
+    background: url('../img/barbie-logo-names.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+.section-2 {
+    background-color: #ffc0cb;
+    /* Rosa claro */
+    color: #000;
+}
+
+.section-3 {
+    background-color: #ff69b4;
+    /* Rosa fuerte */
+    color: #fff;
+}
+
+.section-4 {
+    background-color: #ffc0cb;
+    color: #000;
+}
+
+.section h1,
+.section h2,
+.section p {
+    margin: 0;
+}
+
+/* Estilo para el countdown */
+#countdown {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+svg.one {
+    position: absolute;
+    top: 68%;
+    right: 50%;
+}
+
+svg.two {
+    position: absolute;
+    top: 40%;
+    right: 35%;
+}
+
+svg.three {
+    position: absolute;
+    
+    top: 70%;
+    right: 70%;
+}
+
+.group {
+    -webkit-transform: translate(42.5px, 42.5px);
+    -moz-transform: translate(42.5px, 42.5px);
+    transform: translate(42.5px, 42.5px);
+}
+
+path {
+    -webkit-transform: translate(-42.50px, -42.50px);
+    -moz-transform: translate(-42.50px, -42.50px);
+    transform: translate(-42.50px, -42.50px);
+}
+
+.large {
+    -webkit-animation: large 2.5s infinite;
+    -moz-animation: large 2.5s infinite;
+}
+
+.large-2 {
+    -webkit-animation: large-2 2.5s infinite;
+    -moz-animation: large-2 2.5s infinite;
+}
+
+.small {
+    -webkit-animation: small 2.5s infinite;
+    -moz-animation: small 2.5s infinite;
+}
+
+@-webkit-keyframes large {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: rotate(360deg) scale(1.5);
+        transform: rotate(360deg) scale(1.5);
+    }
+}
+
+@-moz-keyframes large {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(360deg) scale(1.5);
+    }
+}
+
+@-webkit-keyframes large-2 {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(45deg) scale(0);
+        transform: rotate(45deg) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: rotate(405deg) scale(1.1);
+        transform: rotate(405deg) scale(1.1);
+    }
+}
+
+@-moz-keyframes large-2 {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(405deg) scale(1.1);
+    }
+}
+
+@-webkit-keyframes small {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(0deg) scale(0);
+        transform: rotate(0deg) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: rotate(-360deg) scale(1);
+        transform: rotate(-360deg) scale(1.5);
+    }
+}
+
+@-moz-keyframes small {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg) scale(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(-360deg) scale(1.5);
+    }
+}
