@@ -16,7 +16,21 @@ const eventDate = new Date('2024-09-06T17:00:00').getTime(); // Fecha del evento
             countdownElement.innerHTML = "¡El evento es hoy!";
         }
     }
+    document.addEventListener("DOMContentLoaded", function() {
+        const animatedDiv = document.querySelector('.animated-div');
 
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animatedDiv.classList.add('visible');
+                }
+                else{
+                    animatedDiv.classList.remove('visible')
+                }
+            });
+        });
+
+    observer.observe(animatedDiv);
     // Actualizar el countdown cada segundo
     setInterval(updateCountdown, 1000);
 
