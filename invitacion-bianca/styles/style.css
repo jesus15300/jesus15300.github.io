@@ -213,3 +213,7 @@ path {
         transform: translate(0);
     }
 }
+.animated-div.visible {
+    animation: fadeIn 1s forwards;
+    animation: appear 1s forwards;
+}
