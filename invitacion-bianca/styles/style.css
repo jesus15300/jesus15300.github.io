@@ -3,7 +3,6 @@ body,
 html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
     background-color: pink;
     font-family: 'Barbie', sans-serif;
@@ -12,6 +11,33 @@ html {
     overflow-x: hidden;
 }
 
+/* Estilos para pantallas de computadora (ancho mayor a 768px) */
+@media only screen and (min-width: 769px) {
+    .responsive-image {
+        max-width: 300px; /* Ajusta el tamaño máximo para pantallas más grandes */
+        height: auto;
+    }
+    .responsive-image2 {
+        max-width: 200px; /* Ajusta el tamaño máximo para pantallas más grandes */
+        height: auto;
+    }
+}
+
+/* Estilos para pantallas de celular (ancho menor o igual a 768px) */
+@media only screen and (max-width: 768px) {
+    .responsive-image {
+
+        max-width: 200px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
+        height:max-content;
+    }
+    .responsive-image2{
+        max-width: 150px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
+        height:max-content;
+    }
+}
+img{
+
+}
 /* Estilo para cada sección */
 .section {
     height: 100vh;
@@ -26,17 +52,19 @@ html {
 
 /* Colores y fondos */
 .section-1 {
-    background: url('../img/barbie-logo-names.jpg') no-repeat center center/cover;
+    background: url('../img/shiny-stars-on-bright-pink-background-vector.jpg') no-repeat center center/cover;
     color: #fff;
 }
 
 .section-2 {
     background-color: #ffc0cb;
+    background: url('../img/pxfuel-princess.jpg') no-repeat center center/cover;
     /* Rosa claro */
     color: #000;
 }
 
 .section-3 {
+
     background-color: #ff69b4;
     /* Rosa fuerte */
     color: #fff;
@@ -206,17 +234,107 @@ path {
         transform: rotate(-360deg) scale(1.5);
     }
 }
-@keyframes appear {
+@keyframes appear-left {
     from {
         opacity: 0;
-        transform: translate(200px, -20px);
+        transform: translate(-200px, 0px);
     }
     to {
         opacity: 1;
         transform: translate(0);
     }
 }
-.animated-div.visible {
-    animation: fadeIn 1s forwards;
-    animation: appear 1s forwards;
+@keyframes appear-right {
+    from {
+        opacity: 0;
+        transform: translate(200px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
+@keyframes appear-top {
+    from {
+        opacity: 0;
+        transform: translate(0px, -100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes growShrink {
+    0%, 100% {
+        transform: scale(1)  rotate(-3deg);
+    }
+    50% {
+        transform: scale(1.1)  rotate(3deg);
+    }
+}
+@keyframes bouncing {
+    0%, 100% {
+        transform: scale(1) translate(0px,0px);
+    }
+    50% {
+        transform:  scale(1.1) scale(0px,200px);
+    }
+}
+.animated-div-left-to-right{
+    opacity: 0;
+}
+.animated-div-left-to-right.visible {
+    animation: fadeIn 2s forwards;
+    animation: appear-left 2s forwards;
+}
+.animated-div-right-to-left.visible {
+    animation: fadeIn 2s forwards;
+    animation: appear-right 2s forwards;
+}
+
+.animated-div-top-to-center.visible {
+    animation: fadeIn 1s forwards;
+    animation: appear-top 2s forwards;
+}
+.growing{
+    animation: growShrink 2s ease-in-out infinite;
+}
+.bouncing{
+    animation: bouncing 2s ease-in-out infinite;
+}
+.star {
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    animation: animate 10s linear forwards;
+    /* you can set infinite too */
+  }
+  
+  .star::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 50px #fff;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      transform: translateY(500vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .star {
+      font-size: 8px;
+    }
+  }

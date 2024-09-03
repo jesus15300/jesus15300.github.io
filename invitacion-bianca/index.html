@@ -1,98 +1,181 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Invitación a mis 6 años Bianca</title>
-    <link href="https://fonts.cdnfonts.com/css/barbie-6" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="styles/style.css">
-</head>
+    <link href="https://fonts.cdnfonts.com/css/barbie-6" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-    <svg class="one" width="100" height="100" viewBox="0 0 100 100">
-        <g id="copy-1" class="group">
-            <g class="large">
-                <path id="large"
-                    d="M41.25,40 L42.5,10 L43.75,40 L45,41.25 L75,42.5 L45,43.75 L43.75,45 L42.5,75 L41.25,45 L40,43.75 L10,42.5 L40,41.25z"
-                    fill="white" />
-            </g>
-            <g class="large-2" transform="rotate(45)">
-                <use xlink:href="#large" />
-            </g>
-            <g class="small">
-                <path id="small"
-                    d="M41.25,40 L42.5,25 L43.75,40 L45,41.25 L60,42.5 L45,43.75 L43.75,45 L42.5,60 L41.25,45 L40,43.75 L25,42.5 L40,41.25z"
-                    fill="white" />
-            </g>
-        </g>
-    </svg>
-    <svg class="two" width="40" height="40" viewBox="0 0 100 100">
-        <use xlink:href="#copy-1" />
-    </svg>
-
-    <svg class="three" width="70" height="70" viewBox="0 0 100 100">
-        <use xlink:href="#copy-1" />
-    </svg>
+  <body>
     <!-- Sección 1: Imagen completa con el nombre y el mensaje -->
-    <section class="section section-1">
-        <div>
-            <img src="https://vectorseek.com/wp-content/uploads/2023/07/Barbie-Girl-Logo-Vector.png"
-                style="width:200px">
-            <div class="" style="background-color: #ff389b;border-radius: 10px;padding: 20px;">
-                <h1 style="font-size:42px">Te invito a festejar <br> mis 6 años</h1>
-                <img src="img/Bianca-Aitana-1-9-2024.png" alt="" style="max-width: 300px;">
 
-            </div>
+    <section class="section section-1 animated-div-top-to-center">
+      <div>
+        <img
+          src="../invitacion-bianca/img/barbie.png"
+          alt=""
+          style="position: absolute; bottom: 0; left: 0; z-index: 100"
+          class="animated-div-left-to-right responsive-image"
+        />
+        <img
+          src="../invitacion-bianca/img/Barbie-2.png"
+          alt=""
+          style="position: absolute; bottom: 0; right: 0; z-index: 100"
+          class="animated-div-right-to-left responsive-image"
+        />
+        <img
+          src="https://vectorseek.com/wp-content/uploads/2023/07/Barbie-Girl-Logo-Vector.png"
+          style="width: 200px"
+        />
+        <div
+          class="growing"
+          style="background-color: #ff389b; border-radius: 10px; padding: 20px"
+        >
+          <h1 style="font-size: 42px">
+            Te invito a festejar <br />
+            mis 6 años
+          </h1>
+          <img
+            src="img/Bianca-Aitana-1-9-2024.png"
+            alt=""
+            style="max-width: 300px"
+          />
         </div>
+      </div>
     </section>
 
     <!-- Sección 2: Ubicación y mapa -->
-    <section class="section section-2 animated-div">
-        <div>
-            <h2 style="font-size:40px">Ubicación de la misa</h2>
-            <p style="font-size:34px;font-weight:500">Parroquia de San Juan bautista, Libres, Puebla
-                </p>
-            <div style="width: 100%; height: 100%;"><iframe width="100%" height="100%" frameborder="0" scrolling="no"
-                    marginheight="0" marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Parroquia%20de%20san%20juan%20bautista%20libres+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                        href="https://www.gps.ie/">gps systems</a></iframe></div>
-                        <p style="font-size: 12px;">Click en el mapa para ver la Ubicacion</p>
+    <section
+      class="section section-2 animated-div-left-to-right"
+      style="position: relative; opacity: 0"
+    >
+      <div style="background: rgba(255, 85, 177, 0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 85, 177, 0.3);">
+        <h2 style="font-size: 40px">Ubicación de la misa</h2>
+        <p style="font-size: 34px; font-weight: 500">
+          Parroquia de San Juan bautista, Libres, Puebla
+        </p>
+        <div style="width: 100%; height: 100%">
+          <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Parroquia%20de%20san%20juan%20bautista%20libres+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ><a href="https://www.gps.ie/">gps systems</a></iframe
+          >
         </div>
+        <p style="font-size: 12px">Click en el mapa para ver la Ubicacion</p>
+      </div>
+      <img
+        class="responsive-image"
+        src="../invitacion-bianca/img/barbie-doll-png.png"
+        alt=""
+        style="position: absolute; bottom: 0; left: 0"
+      />
+      <img
+        class="responsive-image"
+        src="../invitacion-bianca/img/barbie-3.png"
+        alt=""
+        style="position: absolute; bottom: 0; right: 0"
+      />
     </section>
-    <section class="section section-3">
-        <div>
-            <h2 style="font-size:40px">Ubicación partida de pastel</h2>
-            <p style="font-size:34px;font-weight:500">Calle 5 de mayo #920, Libres, Puebla</p>
-            <div style="width: 100%; height: 100%;"><iframe width="100%" height="100%" frameborder="0" scrolling="no"
-                    marginheight="0" marginwidth="0"
-                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Calle%205%20de%20mayo%20920%20guadalupe%20libres+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                        href="https://www.gps.ie/">gps systems</a></iframe></div>
-                        <p style="font-size: 12px;">Click en el mapa para ver la Ubicacion</p>
+    <section
+      class="section section-3 animated-div-top-to-center"
+      style="position: relative"
+    >
+      <div class="growing">
+        <div
+          style="
+            background: url('../invitacion-bianca/img/barbie.png') no-repeat
+              center center/cover;
+          "
+        ></div>
+        <h2 style="font-size: 40px">Ubicación partida de pastel</h2>
+        <p style="font-size: 34px; font-weight: 500">
+          Calle 5 de mayo #920, Libres, Puebla
+        </p>
+        <div style="width: 100%; height: 100%; position: relative">
+          <img
+            src="../invitacion-bianca/img/Corona.png"
+            alt=""
+            style="position: absolute; bottom: 210px; right: -10px"
+            class="bouncing responsive-image2"
+          />
+          <iframe
+            width="100%"
+            height="100%"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Calle%205%20de%20mayo%20920%20guadalupe%20libres+(My%20Business%20Name)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            ><a href="https://www.gps.ie/">gps systems</a></iframe
+          >
         </div>
+        <p style="font-size: 12px">Click en el mapa para ver la Ubicacion</p>
+      </div>
     </section>
 
     <!-- Sección 3: Fecha, hora y countdown -->
-    <section class="section section-4">
-        <div>
-            <h2>6 de septiembre de 2024</h2>
-            <p>Hora: 05:00PM </p>
-            <p>Misa: 07:00PM</p>
-            <div style="font-size: 26px;" id="countdown">Faltan X días</div>
-        </div>
+    <section
+      class="section section-4"
+      style="
+        background: url('../invitacion-bianca/img/barbie-dogs.jpg');
+        background-size: cover;
+      "
+    >
+      <div
+        class="growing"
+        style="
+          border: black dotted 7px;
+          border-radius: 20px;
+          padding: 40px;background: rgba(255, 85, 176, 0.081);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(5px);
+        "
+      >
+        <h2>6 de septiembre de 2024</h2>
+        <p>Hora: 05:00PM</p>
+        <p>Misa: 07:00PM</p>
+        <div style="font-size: 26px" id="countdown">Faltan X días</div>
+      </div>
     </section>
 
     <!-- Sección 4: Mensaje de despedida -->
-    <section class="section section-3">
-        <div>
-            <h2>Te esperamos para vivir una gran diversión</h2>
-            <p>¡No faltes!</p>
-        </div>
+    <section
+      class="section section-3"
+      style="
+        background: url('../invitacion-bianca/img/desktop-wallpaper-lockscreens-pink-barbie.jpg')
+          no-repeat center center/cover;
+      "
+    >
+      <div>
+        <h2>Te esperamos para vivir una gran diversión</h2>
+        <p>¡No faltes!</p>
+      </div>
     </section>
-
-
-</body>
-<script src="scripts/script.js"></script>
-
+  </body>
+  <script src="scripts/script.js"></script>
 </html>

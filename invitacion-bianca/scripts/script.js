@@ -17,21 +17,43 @@ function updateCountdown() {
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
-    const animatedDiv = document.querySelector('.animated-div');
+    const animatedElements = document.querySelectorAll('[class*="animated-div-"]');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animatedDiv.classList.add('visible');
-            }
-            else {
-                animatedDiv.classList.remove('visible')
-            }
-        });
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        } else {
+            entry.target.classList.remove('visible');
+        }
     });
-
-    observer.observe(animatedDiv);
 });
+
+// Observar cada uno de los elementos animados
+animatedElements.forEach(element => {
+    observer.observe(element);
+});
+
+});
+function stars() {
+    let e = document.createElement("div");
+    e.setAttribute("class", "star");
+    document.body.appendChild(e);
+    e.style.left = Math.random() * +innerWidth + "px";
+  
+    let size = Math.random() * 12;
+    let duration = Math.random() * 1;
+  
+    e.style.fontSize = 12 + "px";
+    e.style.animationDuration = 10 + duration + "s";
+    setTimeout(function () {
+      document.body.removeChild(e);
+    }, 10000);
+  }
+  
+  setInterval(function () {
+    stars();
+  }, 100);
     // Actualizar el countdown cada segundo
     setInterval(updateCountdown, 1000);
 
