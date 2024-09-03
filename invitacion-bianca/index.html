@@ -62,7 +62,7 @@
             alt=""
             style="max-width: 300px"
           />
-          <h1 style="font-size: 16px;" id="clickMusica">Haz click aqui :)</h1>
+          <h1 style="font-size: 16px;user-select: none" id="clickMusica">---> 🎵 Haz click aqui :) 🎵 <---</h1>
         </div>
       </div>
     </section>
@@ -196,6 +196,8 @@
 </html>
 <script>
   let musicaActiva = false;
+  document.getElementById('background-music').volume = 0.3;
+  document.getElementById('background-music').pause();
   function playMusic(){
     if(!musicaActiva){
       document.getElementById('background-music').play();document.getElementById('background-music').volume = 0.3;
@@ -204,7 +206,7 @@
     }
     else{
       document.getElementById('background-music').pause();document.getElementById('background-music').volume = 0.3;
-      document.getElementById('clickMusica').innerHTML = "Haz click aqui :)";
+      document.getElementById('clickMusica').innerHTML = "---> 🎵 Haz click aqui :) 🎵 <---";
       musicaActiva = false;
     }
 
