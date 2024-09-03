@@ -20,6 +20,14 @@
   </head>
 
   <body>
+    <audio id="background-music" autoplay loop>
+      <source
+        src="/invitacion-bianca/music/Aqua-barbie.mp3"
+        type="audio/mpeg"
+      />
+      <!-- Puedes añadir más formatos como .ogg para mayor compatibilidad -->
+      Tu navegador no soporta el elemento de audio.
+    </audio>
     <!-- Sección 1: Imagen completa con el nombre y el mensaje -->
 
     <section class="section section-1 animated-div-top-to-center">
@@ -43,6 +51,7 @@
         <div
           class="growing"
           style="background-color: #ff389b; border-radius: 10px; padding: 20px"
+          onclick="playMusic();"
         >
           <h1 style="font-size: 42px">
             Te invito a festejar <br />
@@ -53,6 +62,7 @@
             alt=""
             style="max-width: 300px"
           />
+          <h1 style="font-size: 16px;" id="clickMusica">Haz click aqui :)</h1>
         </div>
       </div>
     </section>
@@ -62,12 +72,16 @@
       class="section section-2 animated-div-left-to-right"
       style="position: relative; opacity: 0"
     >
-      <div style="background: rgba(255, 85, 177, 0.2);
-      border-radius: 16px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 85, 177, 0.3);">
+      <div
+        style="
+          background: rgba(255, 85, 177, 0.2);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          border: 1px solid rgba(255, 85, 177, 0.3);
+        "
+      >
         <h2 style="font-size: 40px">Ubicación de la misa</h2>
         <p style="font-size: 34px; font-weight: 500">
           Parroquia de San Juan bautista, Libres, Puebla
@@ -149,11 +163,12 @@
         style="
           border: black dotted 7px;
           border-radius: 20px;
-          padding: 40px;background: rgba(255, 85, 176, 0.081);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(3px);
--webkit-backdrop-filter: blur(5px);
+          padding: 40px;
+          background: rgba(255, 85, 176, 0.081);
+          border-radius: 16px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(3px);
+          -webkit-backdrop-filter: blur(5px);
         "
       >
         <h2>6 de septiembre de 2024</h2>
@@ -179,3 +194,19 @@ backdrop-filter: blur(3px);
   </body>
   <script src="scripts/script.js"></script>
 </html>
+<script>
+  let musicaActiva = false;
+  function playMusic(){
+    if(!musicaActiva){
+      document.getElementById('background-music').play();document.getElementById('background-music').volume = 0.3;
+      document.getElementById('clickMusica').innerHTML = "Click de nuevo para pausar :)";
+      musicaActiva = true;
+    }
+    else{
+      document.getElementById('background-music').pause();document.getElementById('background-music').volume = 0.3;
+      document.getElementById('clickMusica').innerHTML = "Haz click aqui :)";
+      musicaActiva = false;
+    }
+
+  }
+</script>
