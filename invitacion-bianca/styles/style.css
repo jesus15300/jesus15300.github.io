@@ -11,6 +11,10 @@ html {
     overflow-x: hidden;
 }
 
+.responsive-image {
+    max-width: 300px; /* Ajusta el tamaño máximo para pantallas más grandes */
+    height: auto;
+}
 /* Estilos para pantallas de computadora (ancho mayor a 768px) */
 @media only screen and (min-width: 769px) {
     .responsive-image {
@@ -27,12 +31,12 @@ html {
 @media only screen and (max-width: 768px) {
     .responsive-image {
 
-        max-width: 200px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
-        height:max-content;
+        max-width: 180px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
+        height:auto;
     }
     .responsive-image2{
         max-width: 150px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
-        height:max-content;
+        height:auto;
     }
 }
 img{
@@ -237,7 +241,7 @@ path {
 @keyframes appear-left {
     from {
         opacity: 0;
-        transform: translate(-200px, 0px);
+        transform: translate(-100px, 0px);
     }
     to {
         opacity: 1;
@@ -247,7 +251,7 @@ path {
 @keyframes appear-right {
     from {
         opacity: 0;
-        transform: translate(200px, 0px);
+        transform: translate(100px, 0px);
     }
     to {
         opacity: 1;
