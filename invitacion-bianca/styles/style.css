@@ -18,7 +18,7 @@ html {
 /* Estilos para pantallas de computadora (ancho mayor a 768px) */
 @media only screen and (min-width: 769px) {
     .responsive-image {
-        max-width: 300px; /* Ajusta el tamaño máximo para pantallas más grandes */
+        max-width: 250px; /* Ajusta el tamaño máximo para pantallas más grandes */
         height: auto;
     }
     .responsive-image2 {
@@ -26,9 +26,19 @@ html {
         height: auto;
     }
 }
+@media only screen and (min-width: 600px) {
+    .responsive-image {
+        max-width: 250px; /* Ajusta el tamaño máximo para pantallas más grandes */
+        height: auto;
+    }
+    .responsive-image2 {
+        max-width: 170px; /* Ajusta el tamaño máximo para pantallas más grandes */
+        height: auto;
+    }
+}
 
 /* Estilos para pantallas de celular (ancho menor o igual a 768px) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .responsive-image {
 
         max-width: 180px; /* Ajusta el tamaño máximo para pantallas más pequeñas */
