@@ -12,8 +12,11 @@ function updateCountdown() {
 
     if (timeLeft > 0) {
         countdownElement.innerHTML = `Faltan ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-    } else {
+    } else if(timeleft <= 0 && timeleft >= 1000 * 60 * 60 * 24) {
         countdownElement.innerHTML = "¡El evento es hoy!";
+    }
+    else {
+        countdownElement.innerHTML = `Hace ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
