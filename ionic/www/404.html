@@ -7,10 +7,10 @@
   <script>
     // Redirige a la URL base (index.html)
     var path = window.location.pathname;
-    if (path !== "/") {
-      window.location.replace("/index.html" + "#!" + path);
+    if (path !== "/ionic/www/") {
+        window.location.replace("/ionic/www/index.html" + "#!" + path);
     } else {
-      window.location.replace("/index.html");
+    window.location.replace("/ionic/www/index.html");
     }
   </script>
 </head>
