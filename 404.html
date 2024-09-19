@@ -5,11 +5,11 @@
     <title>Redirecting...</title>
     <script type="text/javascript">
       // Verifica si la URL actual no es la ruta base de la app
+      var newUrl = '/70-aniv/check-in' //+ window.location.pathname + window.location.search;
+      window.location.replace(newUrl);
       if (window.location.pathname !== '/70-aniv/') {
         // Si no es la ruta base, construye la nueva URL con la ruta correcta
-        var newUrl = '/70-aniv' + window.location.pathname + window.location.search;
         // Redirige solo si no estamos en la ruta correcta
-        window.location.replace(newUrl);
       }
     </script>
   </head>
