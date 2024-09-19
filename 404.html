@@ -2,15 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; URL=./" />
     <script type="text/javascript">
-      // Verifica si la URL actual no tiene la ruta base de la app
-      var newUrl = ''// + window.location.pathname + window.location.search;
-      history.replaceState(null, '', newUrl);
-
+      // Obtiene la URL actual
+      const currentUrl = window.location.href;
+      // Redirige manteniendo los parámetros de consulta
+      const newUrl = currentUrl.replace('/404.html', '');
+      window.location.replace(newUrl);
     </script>
   </head>
-  <body>
-    <p>Redirecting...</p>
-  </body>
+  <body></body>
 </html>
