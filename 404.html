@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; URL=./" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0;url=/" />
     <script type="text/javascript">
       // Obtiene la URL actual
-      const currentUrl = window.location.href;
-      // Redirige manteniendo los parámetros de consulta
-      const newUrl = currentUrl.replace('/404.html', '70-aniv/');
-      window.location.replace(newUrl);
+      var path = window.location.pathname + window.location.search;
+      // Redirige manteniendo la ruta para que la maneje la SPA
+      window.location.href = "/" + "70-aniv" + path;
     </script>
   </head>
-  <body></body>
+  <body>
+    <p>Redirecting...</p>
+  </body>
 </html>
