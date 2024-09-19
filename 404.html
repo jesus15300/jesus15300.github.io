@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0;url=/" />
     <script type="text/javascript">
-      // Obtiene la URL actual
-      var path = window.location.pathname + window.location.search;
-      // Redirige manteniendo la ruta para que la maneje la SPA
-      window.location.href = "/" + "70-aniv" + path;
+      // Verifica si la URL actual no es la ruta base de la app
+      if (window.location.pathname !== '/70-aniv/') {
+        // Si no es la ruta base, construye la nueva URL con la ruta correcta
+        var newUrl = '/70-aniv' + window.location.pathname + window.location.search;
+        // Redirige solo si no estamos en la ruta correcta
+        window.location.replace(newUrl);
+      }
     </script>
   </head>
   <body>
