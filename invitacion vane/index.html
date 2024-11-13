@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Vane</title>
+    <link href="https://fonts.cdnfonts.com/css/pixel" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            scroll-behavior: smooth;
+        }
+        .full-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            
+        }
+
+        .bg-blue {
+            background-color: #aceceb;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-pink {
+            background-color: pink;
+        }
+
+        .level-background {
+            width: auto;
+            height: 1500px;
+            position: relative;
+            image-rendering: pixelated;
+            position: relative;
+            top: -100px;
+            left: 0;
+        }
+
+        .mario {
+
+            width: 45px;
+            position: absolute;
+            bottom: 32.6vh;
+            left: 0px;
+            image-rendering: pixelated;
+        }
+
+        @keyframes marioJump {
+            0% {
+                transform: translate(0, 0px);
+
+            }
+            50% {
+                transform: translate(0, -100px);
+            }
+            100% {
+                transform: translate(0, 0px);
+            }
+        }
+
+        .mensaje {
+            position: absolute;
+            font-size: 40px;
+            width: auto;
+            transform: translate(-50%, 0);
+            text-align: center;
+            top: 50px;
+            left: 50%;
+            width: 300px;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+
+        .font-pixel {
+            font-family: 'Pixel', sans-serif;
+        }
+        .cont{
+            align-self: baseline;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+        }
+        .super-vane{
+            max-width: 600px;
+            width: 80%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contanier">
+        <div class="full-container bg-blue">
+            <img src="NES - Super Mario Bros 3 - Stage 1-1 (1).png" alt="" class="level-background" id="fondo">
+            <img alt="" class="mario" id="mario">
+            <div class="mensaje" id="mensajeInicial">
+                <p class="font-pixel">¡Hola!</p>
+                <p class="font-pixel">Presiona la pantalla para comenzar</p>
+            </div>
+        </div>
+        <div class="full-container bg-pink" id="section1">
+            <div class="cont">
+                <img src="img/SUPER-Vannesa-13-11-2024.png" alt="" class="super-vane">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var xMario = -50;
+        var xFondo = 0;
+        var fondo = document.getElementById("fondo");
+        const centroX = 190;
+        const intervaloMs = 20;
+        const velPx = 3;
+
+        let isWalking = true;
+        let isPresenting = false;
+
+        let iSuelo = 0;
+        let cambioSuelo = false; 
+        const sueloBase = 32;
+
+        let distanceToFloor = [[0,sueloBase],[-1300, 36.6], [-2550, sueloBase],[-3650, 43.6],  [-3900,sueloBase],  [-4500,43.6],  [-4800,32.6],  [-6350,sueloBase]];
+
+        const sounds = ["sound/mario-jump.mp3", "sound/letsago_sound.m4a", "sound/rosalina-observatory.mp3", "sound/sonidito-mario.mp3"];
+        let audioPreloads = [];
+        sounds.forEach(src =>{
+            audio = new Audio(src);
+            audio.preload = "auto";
+            audioPreloads.push(audio);
+        })
+
+        const image = document.getElementById('mario');
+        const images = ["img/mario/sprite_0.png", "img/mario/sprite_1.png", "img/mario/sprite_2.png", "img/mario/sprite_3.png"];
+
+        let index = 0;
+
+        let isEnd = false; 
+
+        const target = document.getElementById('section1');
+        
+
+
+
+        setInterval(() => {
+            if (isWalking) {
+                index = (index + 1) % images.length; // Cambia al siguiente índice y reinicia al llegar al final
+                image.src = images[index];
+            }
+            else {
+                image.src = images[0];
+            }
+        }, 150); // Cambia la imagen cada segundo
+
+        // Al cargar la página, Mario empieza a caminar
+        window.onload = function () {
+            var mario = document.getElementById('mario');
+            mario.style.left = xMario + 'px'; // Mario se mueve al centro
+            var int1 = setInterval(() => {
+                if (xMario < centroX) {
+                    console.log(xMario);
+                    console.log(centroX);
+                    xMario += velPx;
+                    mario.style.left = xMario + 'px';
+                }
+                else {
+                    isWalking = false;
+
+                    clearInterval(int1);
+                }
+            }, intervaloMs);
+
+        };
+        setInterval(() => {
+            if(isPresenting && !isEnd){
+                
+                console.log("xFondo: ", xFondo);
+                console.log("iSuelo: ", iSuelo);
+
+                if(iSuelo +1>=distanceToFloor.length && !isEnd){
+                    console.log("Fin");
+                    
+                    isEnd = true;
+                    isWalking = false;
+                    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                
+                
+                xFondo -= velPx;
+                fondo.style.left = xFondo + "px";
+                mario.style.bottom = distanceToFloor[iSuelo][1] +"vh";
+                
+                
+                if(distanceToFloor[iSuelo+1][0] > xFondo ){
+                    console.log("Suelo: ", distanceToFloor[iSuelo][1]);
+
+                    iSuelo++;
+                    cambioSuelo = true;
+                    console.log("Ya se paso el x");
+                    
+                }
+
+
+            }
+        }, intervaloMs);
+
+        // Cuando se hace clic, Mario salta
+        document.body.addEventListener('click', function () {
+            console.log("pantalla presionada");
+
+            document.getElementById("mensajeInicial").style.display = "none";
+            playAudio(0);
+            if(!isPresenting){
+                playAudio(3);
+            }
+
+
+
+            var mario = document.getElementById('mario');
+            mario.style.animation = 'marioJump 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite';
+            setTimeout(() => {
+                mario.style.animation = ""; 
+            }, 1200);
+            
+            isWalking = true;
+            isPresenting = true;
+        });
+
+        function playAudio(index){
+            audioPreloads[index].play();
+        }
+    </script>
+</body>
+
+</html>
