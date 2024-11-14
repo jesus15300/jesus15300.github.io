@@ -1,61 +1,82 @@
-// const centerX = window.innerWidth;
-// const centerY = window.innerHeight;
-// console.log(centerX, centerY);
-
-// let image = document.getElementById("img1");
-
-// let currentPosition = centerX / 2 + 50;
-// let startPosition = centerX / 2 + 50;
-// let endPosition = -(centerX / 2) - 50;
-// let step = 3;
-// function animateImage() {
-//   // Reduce la posición actual por cada paso
-//   currentPosition -= step;
-
-//   // Aplica la posición usando transform
-//   image.style.transform = `translateX(${currentPosition}px)`;
-
-//   // Comprueba si la imagen ha salido completamente de la pantalla
-//   if (currentPosition <= endPosition) {
-//     console.log(startPosition);
-//     currentPosition = startPosition; // Reinicia a la posición inicial
-//   }
-// }
-
-// // Inicia el intervalo para mover la imagen cada 200 ms
-
-// setInterval(animateImage, 20);
-
-
-
-
-const image = document.getElementById("img1");
-
-// Valores iniciales y finales que quieres pasar a los keyframes
-const startX = "400px";
-const endX = "-400px";
+// Obtenemos las dimensiones de la ventana
+const windowX = window.innerWidth;
+const windowXHalf = windowX/2;
+const windowY = window.innerHeight;
+const windowYHalf = windowY/2;
 
 // Crea una hoja de estilo para agregar los keyframes dinámicos
 const styleSheet = document.createElement("style");
 document.head.appendChild(styleSheet);
 
-// Define los keyframes en tiempo de ejecución
-function setCustomKeyframes(start, end) {
-  const keyframes = `
-    @keyframes customSlide {
-      0% { transform: translateX(${start}); }
-      50% { transform: translateX(0); }
-      100% { transform: translateX(${end}); }
-    }
-  `;
+// Función para crear animaciones dinámicas
+function createAnimation(animationName, type, start, end, startY, endY) {
+  let keyframes;
+
+  // Definimos el tipo de animación
+  switch (type) {
+    case 'horizontal':
+      keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: translateX(${start}px); }
+          50% { transform: translateX(0); }
+          100% { transform: translateX(${end}px); }
+        }
+      `;
+      break;
+    case 'vertical':
+      keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: translateY(${start}px); }
+          50% { transform: translateY(0); }
+          100% { transform: translateY(${end}px); }
+        }
+      `;
+      break;
+    case 'scale':
+      keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: scale(${start}); }
+          50% { transform: scale(1); }
+          100% { transform: scale(${end}); }
+        }
+      `;
+      break;
+    case 'rotate':
+      keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: rotate(${start}deg); }
+          50% { transform: rotate(0deg); }
+          100% { transform: rotate(${end}deg); }
+        }
+      `;
+      break;
+      case 'appear-half':
+        keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: translate(${start}px, ${startY}px) scale(1); }
+          90% { transform: translate(${end}px, ${endY}px) scale(1);}
+          100% { transform: translate(${end}px, ${endY}px) scale(0); }
+        }
+      `;
+      break;
+    default:
+      console.warn("Tipo de animación no soportado.");
+      return;
+  }
 
   // Agrega los keyframes a la hoja de estilo
-  styleSheet.innerHTML = keyframes;
+  styleSheet.innerHTML += keyframes;
 }
 
-// Llama a la función con los valores deseados
-setCustomKeyframes(startX, endX);
+// Función para aplicar una animación a un elemento
+function applyAnimation(element, animationName, duration = '2s', iterationCount = 'infinite') {
+  element.style.animation += `${animationName} ${duration} ease-in-out ${iterationCount}`;
+}
 
-// Activa la animación agregando la clase
-image.classList.add("animate");
+
+// Seleccionamos la imagen y le aplicamos una animación
+const image = document.getElementById("img1");
+let imageX = 50, imageY = 50;
+createAnimation("customAnim", "appear-half", windowXHalf , 0,windowYHalf-30, windowYHalf-20)
+applyAnimation(image, "customAnim", "5s", "infinite");  // Cambia 'slideHorizontal' a la animación deseada
 

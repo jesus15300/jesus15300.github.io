@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación Vane</title>
     <link href="https://fonts.cdnfonts.com/css/pixel" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/super-mario-256" rel="stylesheet">
 
     <style>
         body {
@@ -15,9 +16,11 @@
             justify-content: center;
             align-items: center;
         }
-        .container{
+
+        .container {
             scroll-behavior: smooth;
         }
+
         .full-container {
             display: flex;
             width: 100vw;
@@ -25,7 +28,7 @@
             align-items: center;
             position: relative;
             overflow: hidden;
-            
+
         }
 
         .bg-blue {
@@ -40,15 +43,21 @@
             background-color: pink;
         }
 
-        .test-bg{
+        .test-bg {
             background-image: url("NES\ -\ Super\ Mario\ Bros\ 3\ -\ Stage\ 1-1\ \(1\).png");
             width: 100px;
-            padding-bottom: 56.25%; /* Esto establece una proporción de 16:9 */
-            background-size: cover; /* La imagen cubre todo el ancho y altura */
-            background-repeat: no-repeat; /* Evita que la imagen se repita */
-            background-position: center center; /* Centra la imagen */
-            position: relative; /* Asegura que se mantenga el espacio del contenedor */
+            padding-bottom: 56.25%;
+            /* Esto establece una proporción de 16:9 */
+            background-size: cover;
+            /* La imagen cubre todo el ancho y altura */
+            background-repeat: no-repeat;
+            /* Evita que la imagen se repita */
+            background-position: center center;
+            /* Centra la imagen */
+            position: relative;
+            /* Asegura que se mantenga el espacio del contenedor */
         }
+
         .level-background {
             width: auto;
             height: 1500px;
@@ -73,9 +82,11 @@
                 transform: translate(0, 0px);
 
             }
+
             50% {
                 transform: translate(0, -100px);
             }
+
             100% {
                 transform: translate(0, 0px);
             }
@@ -97,15 +108,57 @@
         .font-pixel {
             font-family: 'Pixel', sans-serif;
         }
-        .cont{
-            align-self: baseline;
-            display: flex;
-            justify-content: center;
-            justify-items: center;
+
+        .font-mario {
+            font-family: 'Super Mario 256', sans-serif;
+
         }
-        .super-vane{
+
+        .cont {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("https://wallpapercave.com/wp/wp2647934.png");
+            height: 100%;
+        }
+
+        .super-vane {
             max-width: 600px;
             width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .img-present {
+            display: flex;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            z-index: 100;
+        }
+
+        .text-shadow {
+            text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000,
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                2px 2px 0 #000,
+                -3px -3px 0 #000,
+                3px -3px 0 #000,
+                -3px 3px 0 #000,
+                3px -3px 0 #000,
+                0px 4px 0 #000,
+                4px 0px 0 #000,
+                -4px 0px 0 #000;
+        }
+
+        .text-medium {
+            font-size: 34px;
         }
     </style>
 </head>
@@ -115,6 +168,43 @@
     <div class="contanier">
         <div class="full-container bg-blue">
             <img src="NES - Super Mario Bros 3 - Stage 1-1 (1).png" alt="" class="level-background" id="fondo">
+            <img src="img/SUPER-Vannesa-13-11-2024.png" alt="" class="img-present"
+                style="width: 250px;transform: scale(0);" id="img2">
+            <div id="img3" class="img-present"
+                style="display: flex; flex-direction: column; align-items: center;width: 100%;gap: 14px; transform: scale(0);">
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">Te
+                    invito</p>
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;"> a mi
+                    fiesta</p>
+
+            </div>
+            <div id="img4" class="img-present"
+                style="display: flex; flex-direction: column; align-items: center;width: 100%;gap: 14px;transform: scale(0);">
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">Habrá
+                    muchas sorpresas...</p>
+            </div>
+            <div id="img5" class="img-present"
+                style="display: flex; flex-direction: column; align-items: center;width: 100%;gap: 14px;transform: scale(0);">
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">Y
+                    muchos dulces</p>
+            </div>
+            <div id="img6" class="img-present"
+                style="display: flex; flex-direction: column; align-items: center;width: 100%;gap: 14px;transform: scale(0);">
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">La ubicación es: </p>
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">Privada del alambrado Libres, Puebla</p>
+
+            </div>
+            <div id="img7" class="img-present"
+                style="display: flex; flex-direction: column; align-items: center;width: 100%;gap: 14px;transform: scale(0);">
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">Te espero el </p>
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">23 de noviembre de 2024</p>
+
+            </div>
+            <div id="img8" class="img-present"
+                style="display: flex; flex-direction: column; align-items: center;width: 100%;gap: 14px;transform: scale(0);">
+                <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">¡No faltes!</p>
+
+            </div>
             <img alt="" class="mario" id="mario">
             <div class="mensaje" id="mensajeInicial">
                 <p class="font-pixel">¡Hola!</p>
@@ -124,7 +214,13 @@
         <div class="full-container bg-pink" id="section1">
             <div class="cont">
                 <img src="img/SUPER-Vannesa-13-11-2024.png" alt="" class="super-vane">
-
+                <h1 class="font-pixel" style="margin-top: 0;">¡Vamos a jugar!</h1>
+                <h3>23 de Noviembre</h3>
+                <h1 id="diasRestantes" class="font-pixel" style="margin-top: 0;">Faltan: ? días</h1>
+                <p style="margin: 0;padding-left: 20px;padding-right: 20px;text-align: center;">Privada del Alambrado, Barrio de Guadalupe, Libres Puebla</p>
+                <iframe width="80%" height="40%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=19.4640440,%20-97.6832561+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                <p>Si no ves el mapa, recarga la pagina...</p>
+                <h1 class="font-pixel">¡No Faltes!</h1>
             </div>
         </div>
     </div>
@@ -142,14 +238,17 @@
         let isPresenting = false;
 
         let iSuelo = 0;
-        let cambioSuelo = false; 
+        let cambioSuelo = false;
         const sueloBase = 32;
 
-        let distanceToFloor = [[0,sueloBase],[-1300, 36.6], [-2550, sueloBase],[-3650, 43.6],  [-3900,sueloBase],  [-4500,43.6],  [-4800,32.6],  [-6350,sueloBase]];
+        let distanceToFloor = [[0, sueloBase], [-1300, 36.6], [-2550, sueloBase], [-3650, 43.6], [-3900, sueloBase], [-4500, 43.6], [-4800, 32.6], [-6350, sueloBase]];
+        let imagesPresent = [[0, "img2"], [-50, "img3"], [-200, "img4"], [-1800, "img5"], [-2600, "img6"], [-3600, "img7"], [-4800, "img8"], [-5500, "img9"], [-8000, "img9"]];
+
+        let iImagen = 0;
 
         const sounds = ["sound/mario-jump.mp3", "sound/letsago_sound.m4a", "sound/rosalina-observatory.mp3", "sound/sonidito-mario.mp3"];
         let audioPreloads = [];
-        sounds.forEach(src =>{
+        sounds.forEach(src => {
             audio = new Audio(src);
             audio.preload = "auto";
             audioPreloads.push(audio);
@@ -160,10 +259,10 @@
 
         let index = 0;
 
-        let isEnd = false; 
+        let isEnd = false;
 
         const target = document.getElementById('section1');
-        
+
 
 
 
@@ -197,32 +296,39 @@
 
         };
         setInterval(() => {
-            if(isPresenting && !isEnd){
-                
-                console.log("xFondo: ", xFondo);
-                console.log("iSuelo: ", iSuelo);
+            if (isPresenting && !isEnd) {
 
-                if(iSuelo +1>=distanceToFloor.length && !isEnd){
+                console.log("xFondo: ", xFondo);
+                // console.log("iSuelo: ", iSuelo);
+
+                if (iSuelo + 1 >= distanceToFloor.length && !isEnd) {
                     console.log("Fin");
-                    
+
                     isEnd = true;
                     isWalking = false;
                     target.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
-                
-                
+
+
                 xFondo -= velPx;
                 fondo.style.left = xFondo + "px";
-                mario.style.bottom = distanceToFloor[iSuelo][1] +"vh";
-                
-                
-                if(distanceToFloor[iSuelo+1][0] > xFondo ){
+                mario.style.bottom = distanceToFloor[iSuelo][1] + "vh";
+
+
+                if (imagesPresent[iImagen + 1][0] > xFondo) {
+                    // Seleccionamos la imagen y le aplicamos una animación
+                    presentar(iImagen);
+                    iImagen++;
+                }
+
+
+                if (distanceToFloor[iSuelo + 1][0] > xFondo) {
                     console.log("Suelo: ", distanceToFloor[iSuelo][1]);
 
                     iSuelo++;
                     cambioSuelo = true;
                     console.log("Ya se paso el x");
-                    
+
                 }
 
 
@@ -234,9 +340,9 @@
             console.log("pantalla presionada");
 
             document.getElementById("mensajeInicial").style.display = "none";
-            playAudio(0);
-            if(!isPresenting){
-                playAudio(3);
+            playAudio(0, 0.2);
+            if (!isPresenting) {
+                playAudio(3, 0.5);
             }
 
 
@@ -244,16 +350,192 @@
             var mario = document.getElementById('mario');
             mario.style.animation = 'marioJump 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite';
             setTimeout(() => {
-                mario.style.animation = ""; 
+                mario.style.animation = "";
             }, 1200);
-            
+
             isWalking = true;
             isPresenting = true;
         });
 
-        function playAudio(index){
+        function playAudio(index, volume) {
             audioPreloads[index].play();
+            audioPreloads[index].volume = volume;
         }
+
+
+        // Obtenemos las dimensiones de la ventana
+        const windowX = window.innerWidth;
+        const windowXHalf = windowX / 2;
+        const windowY = window.innerHeight;
+        const windowYHalf = windowY / 2;
+
+        // Crea una hoja de estilo para agregar los keyframes dinámicos
+        const styleSheet = document.createElement("style");
+        document.head.appendChild(styleSheet);
+
+        // Función para crear animaciones dinámicas
+        function createAnimation(animationName, type, start, end, startY, endY) {
+            let keyframes;
+
+            // Definimos el tipo de animación
+            switch (type) {
+                case 'horizontal':
+                    keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: translateX(${start}px); }
+          50% { transform: translateX(0); }
+          100% { transform: translateX(${end}px); }
+        }
+      `;
+                    break;
+                case 'vertical':
+                    keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: translateY(${start}px); }
+          50% { transform: translateY(0); }
+          100% { transform: translateY(${end}px); }
+        }
+      `;
+                    break;
+                case 'scale':
+                    keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: scale(${start}); }
+          50% { transform: scale(1); }
+          100% { transform: scale(${end}); }
+        }
+      `;
+                    break;
+                case 'rotate':
+                    keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: rotate(${start}deg); }
+          50% { transform: rotate(0deg); }
+          100% { transform: rotate(${end}deg); }
+        }
+      `;
+                    break;
+                case 'appear-half':
+                    keyframes = `
+        @keyframes ${animationName} {
+          0% { transform: translate(${start}px, ${startY}px) scale(1); }
+          30% { transform: translate(${end}px, ${endY}px) scale(1);}
+          70% {transform: translate(${end}px, ${endY}px) scale(1);}
+          100% { transform: translate(${end}px, ${endY}px) scale(0); }
+        }
+      `;
+                    break;
+                default:
+                    console.warn("Tipo de animación no soportado.");
+                    return;
+            }
+
+            // Agrega los keyframes a la hoja de estilo
+            styleSheet.innerHTML += keyframes;
+        }
+
+        // Función para aplicar una animación a un elemento
+        function applyAnimation(element, animationName, duration = '2s', iterationCount = 'infinite') {
+            element.style.animation += `${animationName} ${duration} ease-in-out ${iterationCount}`;
+        }
+
+        function presentar(i) {
+            console.log("presentando", i);
+            let image = imagesPresent[i][1];
+            switch (image) {
+                case "img2":
+                    const image = document.getElementById("img2");
+                    createAnimation("customAnim", "appear-half", windowXHalf, -125, -windowYHalf + 100, -windowYHalf + 100)
+                    applyAnimation(image, "customAnim", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    break;
+                case "img3":
+                    const image2 = document.getElementById("img3");
+                    createAnimation("customAnim2", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 200, -windowYHalf + 200)
+                    applyAnimation(image2, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    break;
+                    
+                    case "img4":
+                        const image3 = document.getElementById("img4");
+                        createAnimation("customAnim3", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 200, -windowYHalf + 200)
+                    applyAnimation(image3, "customAnim3", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    break;
+                case "img5":
+                    const image4 = document.getElementById("img5");
+                    applyAnimation(image4, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    break;
+                case "img6":
+                    const image5 = document.getElementById("img6");
+                    applyAnimation(image5, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    break;
+                case "img7":
+                    const image6 = document.getElementById("img7");
+                    applyAnimation(image6, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    break;
+                default:
+
+                    break;
+
+            }
+
+
+        }
+
+
+
+        function generateBrightColor() {
+            const r = Math.floor(Math.random() * 156) + 100; // 100 a 255
+            const g = Math.floor(Math.random() * 156) + 100;
+            const b = Math.floor(Math.random() * 156) + 100;
+
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        function applyRandomColorsToClass(className) {
+            const elements = document.querySelectorAll(`.${className}`);
+
+            elements.forEach((element) => {
+                const text = element.innerText;
+                element.innerHTML = ''; // Limpia el contenido original
+
+                for (let letter of text) {
+                    const span = document.createElement('span');
+                    span.innerText = letter;
+                    span.style.color = generateBrightColor();
+                    element.appendChild(span);
+                }
+            });
+        }
+
+        // Aplica colores aleatorios brillantes a todos los elementos con la clase "random-color"
+        applyRandomColorsToClass('random-color');
+
+
+        function calcularDiasFaltantes() {
+    // Fecha actual
+    const fechaActual = new Date();
+    // Fecha objetivo (23 de noviembre del año actual)
+    const fechaObjetivo = new Date(fechaActual.getFullYear(), 10, 23); // Meses en JavaScript van de 0 a 11
+
+    // Si la fecha ya pasó en el año actual, se establece la fecha objetivo para el próximo año
+    if (fechaActual > fechaObjetivo) {
+        fechaObjetivo.setFullYear(fechaActual.getFullYear() + 1);
+    }
+
+    // Cálculo de la diferencia en días
+    const diferenciaTiempo = fechaObjetivo - fechaActual;
+    const diasFaltantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24)); // Convierte de ms a días
+
+    // Retorna el mensaje
+    if (diasFaltantes === 0) {
+        return "¡Es hoy!";
+    } else if (diasFaltantes === 1) {
+        return "Falta 1 día.";
+    } else {
+        return `Faltan ${diasFaltantes} días.`;
+    }
+}
+document.getElementById("diasRestantes").innerHTML = calcularDiasFaltantes();
+
     </script>
 </body>
 
