@@ -142,7 +142,7 @@
             width: 45px;
             position: absolute;
             bottom: 550px;
-            left: 0px;
+            left: -50px;
             image-rendering: pixelated;
         }
 
@@ -538,7 +538,7 @@
         var fondo = document.getElementById("fondo");
         const centroX = 190;
         const intervaloMs = 20;
-        const velPx = 3;
+        const velPx = 4.5;
 
         let isWalking = true;
         let isPresenting = false;
@@ -755,34 +755,34 @@
                 case "img2":
                     const image = document.getElementById("img2");
                     createAnimation("customAnim", "appear-half", windowXHalf, -125, -windowYHalf + 0, -windowYHalf + 0)
-                    applyAnimation(image, "customAnim", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    applyAnimation(image, "customAnim", "10s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img3":
                     const image2 = document.getElementById("img3");
                     createAnimation("customAnim2", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 200, -windowYHalf + 200)
-                    applyAnimation(image2, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    applyAnimation(image2, "customAnim2", "10s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
 
                 case "img4":
                     const image3 = document.getElementById("img4");
                     createAnimation("customAnim3", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 100, -windowYHalf + 100)
-                    applyAnimation(image3, "customAnim3", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    applyAnimation(image3, "customAnim3", "10s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img5":
                     const image4 = document.getElementById("img5");
 
-                    applyAnimation(image4, "customAnim2", "8s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    applyAnimation(image4, "customAnim2", "6s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img6":
                     const image5 = document.getElementById("img6");
                     createAnimation("customAnim4", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 0, -windowYHalf + 0)
-                    applyAnimation(image5, "customAnim4", "16s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    applyAnimation(image5, "customAnim4", "14s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img7":
                     const image6 = document.getElementById("img7");
 
                     createAnimation("customAnim5", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 230, -windowYHalf + 230)
-                    applyAnimation(image6, "customAnim5", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    applyAnimation(image6, "customAnim5", "10s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 default:
 
