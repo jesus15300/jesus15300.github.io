@@ -68,11 +68,17 @@
             left: 0;
         }
 
+        .mario-container{
+            position: absolute;
+            width: 100%;
+            height: 1400px;
+
+        }
         .mario {
 
             width: 45px;
             position: absolute;
-            bottom: 32.6vh;
+            bottom: 550px;
             left: 0px;
             image-rendering: pixelated;
         }
@@ -119,7 +125,11 @@
             flex-direction: column;
             align-items: center;
             background-image: url("https://wallpapercave.com/wp/wp2647934.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center bottom;
             height: 100%;
+            width: 100%;
         }
 
         .super-vane {
@@ -137,7 +147,12 @@
             left: 50%;
             z-index: 100;
         }
-
+        .text-present{
+            
+            display: flex;
+            position: absolute;
+            z-index: 100;
+        }
         .text-shadow {
             text-shadow:
                 -1px -1px 0 #000,
@@ -160,6 +175,174 @@
         .text-medium {
             font-size: 34px;
         }
+        .d-none{
+            display: none;
+        }
+        @-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.10, 0.85, 1);
+            transform: scale3d(1.10, 0.85, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+            transform: scale3d(0.85, 1.15, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.02, 0.98, 1);
+            transform: scale3d(1.02, 0.98, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.98, 1.02, 1);
+            transform: scale3d(0.98, 1.02, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.025, 0.975, 1);
+            transform: scale3d(1.025, 0.975, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.99, 1.01, 1);
+            transform: scale3d(0.99, 1.01, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.01, 0.99, 1);
+            transform: scale3d(1.01, 0.99, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+	        animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+}
+
     </style>
 </head>
 
@@ -168,6 +351,14 @@
     <div class="contanier">
         <div class="full-container bg-blue">
             <img src="NES - Super Mario Bros 3 - Stage 1-1 (1).png" alt="" class="level-background" id="fondo">
+            <div id="gifs" class="d-none">
+                <img style="position: absolute;bottom: 100px;left: 0;" src="https://media.tenor.com/_kHKgwHH9D4AAAAi/mexico-cat-dance.gif" alt="" srcset="">
+                <img style="position: absolute;bottom: 100px;right: 0;" src="https://media.tenor.com/_kHKgwHH9D4AAAAi/mexico-cat-dance.gif" alt="" srcset="">
+                <img style="position: absolute;bottom: 100px;left: 50%;transform:  translateX(-50%);height: 100px;" src="https://media.tenor.com/cPtYcaG8XXoAAAAi/mario-dance.gif" alt="" srcset="">
+            </div>
+            <div class="mario-container">
+                <img alt="" class="mario" id="mario">
+            </div>
             <img src="img/SUPER-Vannesa-13-11-2024.png" alt="" class="img-present"
                 style="width: 250px;transform: scale(0);" id="img2">
             <div id="img3" class="img-present"
@@ -205,7 +396,7 @@
                 <p class=" font-mario text-shadow random-color text-medium" style="text-align: center;margin: 0;">¡No faltes!</p>
 
             </div>
-            <img alt="" class="mario" id="mario">
+            
             <div class="mensaje" id="mensajeInicial">
                 <p class="font-pixel">¡Hola!</p>
                 <p class="font-pixel">Presiona la pantalla para comenzar</p>
@@ -213,14 +404,15 @@
         </div>
         <div class="full-container bg-pink" id="section1">
             <div class="cont">
-                <img src="img/SUPER-Vannesa-13-11-2024.png" alt="" class="super-vane">
+                <img src="img/SUPER-Vannesa-13-11-2024.png" alt="" class="super-vane" style="-webkit-animation:heartbeat 1.3s ease-in-out infinite both;animation:heartbeat 1.3s ease-in-out infinite both">
                 <h1 class="font-pixel" style="margin-top: 0;">¡Vamos a jugar!</h1>
                 <h3>23 de Noviembre</h3>
-                <h1 id="diasRestantes" class="font-pixel" style="margin-top: 0;">Faltan: ? días</h1>
+                <h1 id="diasRestantes" class="font-pixel text-pop-up-top" style="margin-top: 0;">Faltan: ? días</h1>
                 <p style="margin: 0;padding-left: 20px;padding-right: 20px;text-align: center;">Privada del Alambrado, Barrio de Guadalupe, Libres Puebla</p>
-                <iframe width="80%" height="40%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=19.4640440,%20-97.6832561+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                <iframe style="-webkit-animation: jello-horizontal 1.4s both infinite ;animation:jello-horizontal 1.4s both infinite;" src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d940.4508477544581!2d-97.68389983043276!3d19.464041798863885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTnCsDI3JzUwLjYiTiA5N8KwNDAnNTkuNyJX!5e0!3m2!1ses!2smx!4v1731637932171!5m2!1ses!2smx" width="80%" height="40%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <p>Si no ves el mapa, recarga la pagina...</p>
-                <h1 class="font-pixel">¡No Faltes!</h1>
+                <h1 class="font-pixel ">¡No Faltes!</h1>
+                
             </div>
         </div>
     </div>
@@ -236,13 +428,14 @@
 
         let isWalking = true;
         let isPresenting = false;
+        let canStart = false;
 
         let iSuelo = 0;
         let cambioSuelo = false;
-        const sueloBase = 32;
+        const sueloBase = 550;
 
-        let distanceToFloor = [[0, sueloBase], [-1300, 36.6], [-2550, sueloBase], [-3650, 43.6], [-3900, sueloBase], [-4500, 43.6], [-4800, 32.6], [-6350, sueloBase]];
-        let imagesPresent = [[0, "img2"], [-50, "img3"], [-200, "img4"], [-1800, "img5"], [-2600, "img6"], [-3600, "img7"], [-4800, "img8"], [-5500, "img9"], [-8000, "img9"]];
+        let distanceToFloor = [[0, sueloBase], [-1300, sueloBase+40], [-2550, sueloBase+3], [-3650, sueloBase+117], [-3900, sueloBase], [-4500, sueloBase + 117], [-4800, sueloBase], [-6200, sueloBase]];
+        let imagesPresent = [[0, "img2"], [-50, "img3"], [-200, "img4"], [-1800, "img5"], [-2200, "img6"], [-3300, "img7"], [-4800, "img8"], [-5500, "img9"], [-8000, "img9"]];
 
         let iImagen = 0;
 
@@ -289,7 +482,7 @@
                 }
                 else {
                     isWalking = false;
-
+                    canStart = true;
                     clearInterval(int1);
                 }
             }, intervaloMs);
@@ -312,7 +505,7 @@
 
                 xFondo -= velPx;
                 fondo.style.left = xFondo + "px";
-                mario.style.bottom = distanceToFloor[iSuelo][1] + "vh";
+                mario.style.bottom = distanceToFloor[iSuelo][1] + "px";
 
 
                 if (imagesPresent[iImagen + 1][0] > xFondo) {
@@ -339,10 +532,12 @@
         document.body.addEventListener('click', function () {
             console.log("pantalla presionada");
 
+            if(!canStart)return;
             document.getElementById("mensajeInicial").style.display = "none";
             playAudio(0, 0.2);
             if (!isPresenting) {
                 playAudio(3, 0.5);
+                document.getElementById("gifs").classList.remove("d-none");
             }
 
 
@@ -445,7 +640,7 @@
             switch (image) {
                 case "img2":
                     const image = document.getElementById("img2");
-                    createAnimation("customAnim", "appear-half", windowXHalf, -125, -windowYHalf + 100, -windowYHalf + 100)
+                    createAnimation("customAnim", "appear-half", windowXHalf, -125, -windowYHalf + 0, -windowYHalf + 0)
                     applyAnimation(image, "customAnim", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img3":
@@ -456,20 +651,24 @@
                     
                     case "img4":
                         const image3 = document.getElementById("img4");
-                        createAnimation("customAnim3", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 200, -windowYHalf + 200)
+                        createAnimation("customAnim3", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 100, -windowYHalf + 100)
                     applyAnimation(image3, "customAnim3", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img5":
                     const image4 = document.getElementById("img5");
-                    applyAnimation(image4, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    
+                    applyAnimation(image4, "customAnim2", "8s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img6":
                     const image5 = document.getElementById("img6");
-                    applyAnimation(image5, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    createAnimation("customAnim4", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 0, -windowYHalf + 0)
+                    applyAnimation(image5, "customAnim4", "16s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 case "img7":
                     const image6 = document.getElementById("img7");
-                    applyAnimation(image6, "customAnim2", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
+                    
+                    createAnimation("customAnim5", "appear-half", windowXHalf, -windowXHalf, -windowYHalf + 230, -windowYHalf + 230)
+                    applyAnimation(image6, "customAnim5", "12s", "1");  // Cambia 'slideHorizontal' a la animación deseada
                     break;
                 default:
 
@@ -483,8 +682,8 @@
 
 
         function generateBrightColor() {
-            const r = Math.floor(Math.random() * 156) + 100; // 100 a 255
-            const g = Math.floor(Math.random() * 156) + 100;
+            const r = Math.floor(Math.random() * 156) + 80; // 100 a 255
+            const g = Math.floor(Math.random() * 156) + 80;
             const b = Math.floor(Math.random() * 156) + 100;
 
             return `rgb(${r}, ${g}, ${b})`;
