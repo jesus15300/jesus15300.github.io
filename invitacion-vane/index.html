@@ -43,6 +43,68 @@
             background-color: pink;
         }
 
+/* Contenedor del botón */
+.fixed-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Estilo del botón circular */
+    .button-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+        outline: none; /* Elimina el borde de enfoque predeterminado */
+    }
+
+    /* Tooltip oculto inicialmente */
+    .button-circle::after {
+        content: "¡Hola! Soy un tooltip";
+        position: absolute;
+        bottom: 80px; /* Muestra el tooltip encima del botón */
+        right: 50%;
+        transform: translateX(50%);
+        padding: 8px 12px;
+        background-color: #333;
+        color: white;
+        font-size: 14px;
+        border-radius: 4px;
+        opacity: 0;
+        visibility: hidden;
+        white-space: nowrap;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Muestra el tooltip al hacer clic (cuando el botón está en :focus o :active) */
+    .button-circle:focus::after,
+    .button-circle:active::after {
+        opacity: 1;
+        visibility: visible;
+        animation: hideTooltip 3s forwards;
+    }
+
+    /* Animación para ocultar el tooltip después de 3 segundos */
+    @keyframes hideTooltip {
+        0%, 90% {
+            opacity: 1;
+            visibility: visible;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
         .test-bg {
             background-image: url("NES\ -\ Super\ Mario\ Bros\ 3\ -\ Stage\ 1-1\ \(1\).png");
             width: 100px;
@@ -756,29 +818,33 @@
 
 
         function calcularDiasFaltantes() {
-            // Fecha actual
-            const fechaActual = new Date();
-            // Fecha objetivo (23 de noviembre del año actual)
-            const fechaObjetivo = new Date(fechaActual.getFullYear(), 10, 23); // Meses en JavaScript van de 0 a 11
+    // Fecha actual, ajustada a la medianoche para evitar desajustes de horas
+    const fechaActual = new Date();
+    fechaActual.setHours(0, 0, 0, 0);
 
-            // Si la fecha ya pasó en el año actual, se establece la fecha objetivo para el próximo año
-            if (fechaActual > fechaObjetivo) {
-                fechaObjetivo.setFullYear(fechaActual.getFullYear() + 1);
-            }
+    // Fecha objetivo (23 de noviembre del año actual), también ajustada a medianoche
+    const fechaObjetivo = new Date(fechaActual.getFullYear(), 10, 23);
+    
+    // Si la fecha objetivo ya pasó en el año actual, se establece para el próximo año
+    if (fechaActual > fechaObjetivo) {
+        fechaObjetivo.setFullYear(fechaActual.getFullYear() + 1);
+    }
 
-            // Cálculo de la diferencia en días
-            const diferenciaTiempo = fechaObjetivo - fechaActual;
-            const diasFaltantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24)); // Convierte de ms a días
+    // Cálculo de la diferencia en días
+    const diferenciaTiempo = fechaObjetivo - fechaActual;
+    const diasFaltantes = Math.ceil(diferenciaTiempo / (1000 * 60 * 60 * 24)); // Convierte de ms a días
 
-            // Retorna el mensaje
-            if (diasFaltantes === 0) {
-                return "¡Es hoy!";
-            } else if (diasFaltantes === 1) {
-                return "Falta 1 día.";
-            } else {
-                return `Faltan ${diasFaltantes} días.`;
-            }
-        }
+    // Retorna el mensaje
+    if (diasFaltantes === 0) {
+        return "¡Es hoy!";
+    } else if (diasFaltantes === 1) {
+        return "Falta 1 día.";
+    } else {
+        return `Faltan ${diasFaltantes} días.`;
+    }
+}
+
+
         document.getElementById("diasRestantes").innerHTML = calcularDiasFaltantes();
 
     </script>
