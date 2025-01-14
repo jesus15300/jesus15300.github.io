@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitacion Itza</title>
+    <link rel="stylesheet" href="css/paper.css">
+    <link rel="stylesheet" href="css/personalizado.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/jello-vertical.css">
+    <link rel="stylesheet" href="css/wavy.css">
+    <link rel="stylesheet" href="css/sprites.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
+        integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex justify-content-center align-items-center screen-size">
+
+    <div class="letter size-100">
+
+        <div class="z-background-0">
+            <div class="d-flex flex-column size-100 position-absolute">
+
+                <video class="size-100 position-absolute fit-cover" autoplay muted loop preload="auto">
+                    <source src="videos/nature-caricature.mp4" type="video/mp4">
+                    <source src="https://wallpapercave.com/wp/wp8592748.jpg">
+                </video>
+
+                <p class="font-2 x-100 text-center p-1 heartbeat pt-text">Tienes un mensaje de Plim Plim</p>
+                <img src="img/plim-plim-logo.png" class="heartbeat align-self-center fit-contain" alt=""
+                    style="height: 100px;width: auto;">
+                <img src="https://i.giphy.com/GEn4d0jIFUGt8dvlK5.webp" alt=""
+                    class="position-absolute plim-plim-welcome">
+            </div>
+            <div class="envelope-wrapper flex-column">
+                <div class="envelope">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-paper"></div>
+                    <div class="envelope-detail"></div>
+                </div>
+                <div class="button align-items-center justify-content-center heartbeat" id="open-letter"
+                    onclick="playSong(0)">
+                    Abrir mensaje
+                </div>
+            </div>
+        </div>
+        <div class="paper position-relative z-content-1" style="margin-top: 1px;">
+            <div id="btn-volume" class="button-volume position-absolute z-content-2" onclick="changeVolume(this)"><i
+                    class="fa fa-volume-up" aria-hidden="true" style="margin: auto;"></i></div>
+            <div id="video-bg" class="position-absolute size-100 z-background-1">
+                <video class="size-100 d-flex position-absolute fit-cover" autoplay muted loop preload="true" style="height: 100vh;">
+                    <source src="videos/Bg-invitacion.mp4" type="video/mp4">
+                    <source src="https://i.pinimg.com/1200x/f3/6b/8a/f36b8ad4ada7d5c9b0c8fc58a4774274.jpg">
+                </video>
+
+            </div>
+
+
+            <div class="screen-size position-relative d-flex flex-column container-observed border-bottom"
+                style="margin-top: 1px;">
+                <!-- <img class="size-100 position-absolute fit-cover z-background"
+                        src="https://i.pinimg.com/1200x/f3/6b/8a/f36b8ad4ada7d5c9b0c8fc58a4774274.jpg"> -->
+
+                <div class="box-observed">
+                    <p class="pt-text font-2 x-100 text-center text-color-primary text-shadow-solid-black p-1 
+                            invisible text-appear-left">
+                        Estas cordialmente invitado a mi cumpleaños
+                    </p>
+                    <p class="font-3 x-100 text-center text-color-primary text-shadow-solid-black p-0 jello-vertical">#1</p>
+                </div>
+                <div class="animation-1 img-b-l z-content-1">.</div>
+
+                <!-- <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnFhNmJwOTRmbDhoNXA5cXI0ZmZxOHJkOWRtajk0Y3Fzd3cwb2ViZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/J1ujeAGXTnVzDDQgMn/giphy.webp"
+                    class="img-b-l " alt="payasito" style="height: 50vh"> -->
+            </div>
+            <div class="screen-size position-relative  container-observed border-bottom" style="margin-top: 1px;">
+                <div class="box-observed">
+                    <!-- <p
+                        class="pt-text font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        Itzae Adair De la Fuente Salgado
+                    </p> -->
+                    <p
+                        class="waviy pt-text font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                            <span style="--i:1">I</span>
+                        <span style="--i:2">t</span>
+                        <span style="--i:3">z</span>
+                        <span style="--i:4">a</span>
+                        <span style="--i:5">e</span>
+                        <span style="--i:6; margin-left: 17px;"></span>
+                        <span style="--i:7">A</span>
+                        <span style="--i:8">d</span>
+                        <span style="--i:9">a</span>
+                        <span style="--i:10">i</span>
+                        <span style="--i:11">r</span>                     
+
+                    </p>
+                    <p
+                        class="waviy font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        <span style="--i:12">D</span>
+                        <span style="--i:13">e</span>
+                        <span style="--i:14; margin-left: 17px;"> </span>
+                        <span style="--i:15">l</span>
+                        <span style="--i:16">a</span>
+
+                    </p>
+                    <p
+                        class="waviy font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        <span style="--i:18">F</span>
+                        <span style="--i:19">u</span>
+                        <span style="--i:20">e</span>
+                        <span style="--i:21">n</span>
+                        <span style="--i:22">t</span>
+                        <span style="--i:23">e</span>
+                        <span class="spaces-margin" style="--i:24; margin-left: 17px;"> </span>
+                        <span style="--i:25">S</span>
+                        <span style="--i:26">a</span>
+                        <span style="--i:27">l</span>
+                        <span style="--i:28">g</span>
+                        <span style="--i:29">a</span>
+                        <span style="--i:30">d</span>
+                        <span style="--i:31">o</span>
+
+                    </p>
+                    <!-- <img src="https://i.giphy.com/VJ6EkFU82cfiRNizcI.webp" class="img-b-l" alt="payasito"
+                        style="height: 50vh"> -->
+                    </div>
+                    <div class="animation-container-2  img-b-l" style="bottom: 0;">
+                        <img class="animation-2" src="./img/plim-2.png" alt="">
+                    </div>
+                    <!-- <div class="animation-2 img-b-l z-content-1" style="background-size: cover;"></div> -->
+            </div>
+            <div class=" screen-size position-relative  container-observed border-bottom" style="margin-top: 1px;">
+                <div class="box-observed">
+                    <p
+                        class="jello-vertical text-shadow-pop-top pt-text font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        Habra muchos Dulces y regalos
+                    </p>
+                    <div class="animation-container-2  img-b-l" style="bottom: 0;">
+                        <img class="animation-2" src="./img/plim-3.png" alt="">
+                    </div>
+                    <!-- <img src="https://i.giphy.com/VJ6EkFU82cfiRNizcI.webp" class="img-b-l" alt="payasito"
+                        style="height: 50vh"> -->
+                </div>
+            </div>
+            <div class="screen-size position-relative  container-observed border-bottom" style="margin-top: 1px;">
+                <div class="box-observed">
+                    <p
+                        class="pt-text font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        La fiesta será el 01 de Febrero a las 03:00 pm
+                    </p>
+                    <div class="animation-container-2  img-b-l" style="bottom: 0;">
+                        <img class="animation-3" src="./img/plim-4.png" alt="">
+                    </div>
+                    <!-- <img src="https://i.giphy.com/SE5x2BwD1wsqqVpvHZ.webp" class="img-b-l invisible text-appear-down"
+                        alt="payasito" style="height: 50vh"> -->
+                </div>
+            </div>
+            <div class="screen-size position-relative  container-observed border-bottom" style="margin-top: 1px;">
+                <div class="box-observed">
+                    <p
+                        class="pt-text font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        Salón Victoria
+                    </p>
+                    <p
+                        class="font-2 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        Calle 13 poniente 320, San Juan, Libres, Pue.
+                    </p>
+                    <div class="animation-container-2  img-b-l" style="bottom: 0;">
+                        <img class="animation-4" src="./img/plim-5.png" alt="">
+                    </div>
+                    <!-- <img src="https://i.giphy.com/GEn4d0jIFUGt8dvlK5.webp" class="img-b-l" alt="payasito"
+                        style="height: 50vh"> -->
+                </div>
+            </div>
+            <div class="screen-size position-relative  container-observed border-bottom" style="margin-top: 1px;">
+                <div class="box-observed">
+                    <p class="heartbeat pt-text font-3 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right"
+                        style="line-height: 1;">
+                        Te esperamos 
+                    </p>
+                    <p class=" font-2 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right"
+                        style="line-height: 1;">
+                        Faltan
+                    </p>
+                    <p id="dias-horas"
+                        class="font-2 x-100 p-0 text-center text-color-primary text-shadow-solid-black invisible text-appear-right"
+                        style="line-height: 1;">
+                    </p>
+                    <p id="minutos-segundos"
+                        class="font-2 x-100 p-0 text-center text-color-primary text-shadow-solid-black invisible text-appear-right"
+                        style="line-height: 1;">
+                    </p>
+                    <div id="map-container" class="mapa d-flex flex-column justify-center text-center map-container">
+                        <!-- <iframe id="google-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3761.9134215802783!2d-97.69331632600488!3d19.45929928182576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85daada83532b22d%3A0x1d4f5bcfb8c0b3db!2sSalon%20Victoria!5e0!3m2!1ses-419!2smx!4v1736625755985!5m2!1ses-419!2smx"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                        <a class="py-2"
+                            href="https://www.google.com/maps?ll=19.464039,-97.683909&z=17&t=m&hl=es-419&gl=MX&mapclient=embed&q=19%C2%B027%2750.5%22N+97%C2%B040%2759.8%22W+19.464028,+-97.683278@19.4640278,-97.6832778">Click
+                            aqui si no vez el mapa</a>
+                    </div>
+                    <div class="text-center text-color-primary text-shadow-solid-black">
+                        <p class="font-2 py-2">Confirma tu asistencia</p>
+                        <form id="form">
+                            <label class="font-1" for="name">Nombre:</label><br>
+                            <input type="text" name="idInvitacion" value="1" hidden>
+                            <input type="text" id="name" name="nombre" required>
+                            <br>
+                            <button type="submit" id="btnConfirmar">Confirmar</button>
+                        </form>
+                    </div>
+                    <div class="x-100 text-center pt-3">
+                        <a onclick="verGaleria()" class= "heartbeat font-1 py-1">Ver galeria de Itzae</a>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-size d-flex flex-column" style="margin-top: 1px;" id="galeria">
+                <div class="box-observed">
+                    <p
+                        class="font-2 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
+                        Mis fotos...
+                    </p>
+                </div>
+                <div class="x-100 d-flex justify-center">
+
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                        style="margin: 20px; width: 80%; max-width: 400px;">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9"
+                                aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10"
+                                aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner" style="border-radius: 50px;">
+                            <div class="carousel-item active">
+                                <img src="./img/imagenes-itza/img1.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img2.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img3.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img4.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img5.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img6.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img7.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img8.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img9.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img10.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/imagenes-itza/img11.jpeg" class="d-block x-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<script src="js/constantes.js"></script>
+<script src="js/reload-map.js"></script>
+<script src="js/main.js"></script>
+<script src="js/letter.js"></script>
+<script src="js/visibility-observer.js"></script>
+<script src="js/audio-manager.js"></script>
+<script src="js/send-form.js"></script>
+<script src="js/visita-service.js"></script>
+<script src="js/cuenta-regresiva.js"></script>
+
+
+
+</html>

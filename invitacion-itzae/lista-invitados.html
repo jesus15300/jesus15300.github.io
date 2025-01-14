@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitados Confirmados</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+
+    .guest-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+      padding: 1rem;
+    }
+
+    .guest-card h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .guest-card p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .guest-card .highlight {
+      color: #4CAF50;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Invitados Confirmados
+  </header>
+  <div class="container" id="guest-list">
+    <p id="info">Invitados confirmados - vistas a la invitacion</p>
+    <!-- Los invitados se cargarán dinámicamente aquí -->
+  </div>
+  <div class="footer">
+    &copy; 2025 Jesus153
+  </div>
+  <script src="/invitacion-itza/js/obtener-invitados-confirmados.js"></script>
+  <script src="/invitacion-itza/js/constantes.js"></script>
+  <script>
+    obtenerInvitadosConfirmados().then(data => {
+      invitados = data.confirmados;
+      numeroVisitas = data.numeroVisitas;
+      numeroConfirmados = data.numeroConfirmados;
+      console.log(invitados);
+    }).then(() => {
+      // Referencia al contenedor de la lista de invitados
+      const guestListContainer = document.getElementById("guest-list");
+
+      // Generar y mostrar las tarjetas de los invitados
+      invitados.forEach(invitado => {
+        const card = document.createElement("div");
+        card.className = "guest-card";
+
+        card.innerHTML = `
+          <h3>${invitado.nombre}</h3>
+          <p><strong>Acompañantes:</strong> <span class="highlight">${getStringOrDefault(invitado.acompanantes, "No definido")}</span></p>
+          <p><strong>Fecha de Confirmación:</strong> ${stilizeDate(invitado.fechaConfirmacion)}</p>
+          <p><strong>Tipo de Invitación:</strong> ${invitado.invitacion.nombre}</p>
+        `;
+
+        guestListContainer.appendChild(card);
+      });
+      const info = document.getElementById("info");
+        info.innerHTML = ` ${numeroConfirmados} invitados confirmados - ${numeroVisitas} vistas a la invitacion `;
+    });
+    function getStringOrDefault(value, defaultValue) {
+      return value ? value : defaultValue;
+    }
+    function stilizeDate(date) {
+      return date ? new Date(date).toLocaleString() : "No definido";
+    }
+  </script>
+  
+</body>
+</html>
