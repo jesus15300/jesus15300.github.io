@@ -1,4 +1,4 @@
-const eventDate = new Date("2025-02-01T15:00:00"); 
+const eventDate = new Date("2025-02-01T15:00:00");
 
 // Actualizar la cuenta regresiva cada segundo
 const diasElement = document.getElementById("dias-horas");
@@ -20,7 +20,6 @@ function updateCountdown() {
 
     diasElement.textContent = `${days} dias, ${hours} horas`;
     minutosElement.textContent = `${minutes} minutos y ${seconds} segundos`;
-    
 }
 
 // Inicia el intervalo para actualizar la cuenta regresiva

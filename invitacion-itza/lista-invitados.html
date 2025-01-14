@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,65 +60,67 @@
 
     /*loader*/
     .loading-modal {
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #00000066;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    opacity: 1;
-    visibility: visible;
-  }
-
-  .loading-modal.disabled {
-    opacity: 0;
-    visibility: hidden;
-  }
-
-  .spinner {
-    position: relative;
-    width: 80px;
-    height: 80px;
-  }
-
-  .circle {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 6px solid transparent;
-    border-radius: 50%;
-    animation: spin 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  }
-
-  .circle:nth-child(1) {
-    border-right-color: #fff;
-    animation-duration: 1.5s;
-  }
-
-  .circle:nth-child(2) {
-    border-right-color: rgba(255, 255, 255, 0.6);
-    animation-duration: 1.5s;
-    animation-delay: 0.15s;
-  }
-
-  .circle:nth-child(3) {
-    border-right-color: rgba(255, 255, 255, 0.3);
-    animation-duration: 1.5s;
-    animation-delay: 0.3s;
-  }
-
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #00000066;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      opacity: 1;
+      visibility: visible;
     }
-    100% {
-      transform: rotate(360deg);
+
+    .loading-modal.disabled {
+      opacity: 0;
+      visibility: hidden;
     }
-  }
+
+    .spinner {
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .circle {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 6px solid transparent;
+      border-radius: 50%;
+      animation: spin 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    }
+
+    .circle:nth-child(1) {
+      border-right-color: #fff;
+      animation-duration: 1.5s;
+    }
+
+    .circle:nth-child(2) {
+      border-right-color: rgba(255, 255, 255, 0.6);
+      animation-duration: 1.5s;
+      animation-delay: 0.15s;
+    }
+
+    .circle:nth-child(3) {
+      border-right-color: rgba(255, 255, 255, 0.3);
+      animation-duration: 1.5s;
+      animation-delay: 0.3s;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="loading-modal disabled" id="loader">
     <div class="spinner">
@@ -164,7 +167,7 @@
         guestListContainer.appendChild(card);
       });
       const info = document.getElementById("info");
-        info.innerHTML = ` ${numeroConfirmados} invitados confirmados - ${numeroVisitas} vistas a la invitacion `;
+      info.innerHTML = ` ${numeroConfirmados} invitados confirmados - ${numeroVisitas} vistas a la invitacion `;
     });
     function getStringOrDefault(value, defaultValue) {
       return value ? value : defaultValue;
@@ -173,6 +176,7 @@
       return date ? new Date(date).toLocaleString() : "No definido";
     }
   </script>
-  
+
 </body>
+
 </html>

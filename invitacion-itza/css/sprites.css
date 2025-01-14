@@ -1,12 +1,14 @@
-
 .animation-1 {
   position: relative;
-    width: calc(40vh * 83); /* Mantener proporción */
-    height: 40vh; /* Altura en función del viewport */
-    object-fit: fill;
-    animation: play-1 3s steps(83) infinite; /* 4 frames */
+  width: calc(40vh * 83);
+  /* Mantener proporción */
+  height: 40vh;
+  /* Altura en función del viewport */
+  object-fit: fill;
+  animation: play-1 3s steps(83) infinite;
+  /* 4 frames */
 
-    /* width: calc(40vh * (400px / 400px)); 
+  /* width: calc(40vh * (400px / 400px)); 
     height: 40vh; 
     background-size: 100% auto;
     background: url('../img/plim-1.png') no-repeat;
@@ -18,61 +20,82 @@
   from {
     left: 0px;
   }
+
   to {
-    left: calc(40vh * -83); /* Ajusta según el número total de frames */
+    left: calc(40vh * -83);
+    /* Ajusta según el número total de frames */
   }
 }
-.animation-container-2{
-    position: absolute;
-    width: 40vh;
-            height: 40vh;
-            overflow: hidden;
+
+.animation-container-2 {
+  position: absolute;
+  width: 40vh;
+  height: 40vh;
+  overflow: hidden;
 }
+
 .animation-2 {
-    position: relative;
-    width: calc(40vh * 4); /* Mantener proporción */
-    height: 40vh; /* Altura en función del viewport */
-    object-fit: fill;
-    animation: play-2 1s steps(4) infinite; /* 4 frames */
+  position: relative;
+  width: calc(40vh * 4);
+  /* Mantener proporción */
+  height: 40vh;
+  /* Altura en función del viewport */
+  object-fit: fill;
+  animation: play-2 1s steps(4) infinite;
+  /* 4 frames */
+}
+
+@keyframes play-2 {
+  from {
+    left: 0px;
   }
-  
-  @keyframes play-2 {
-    from {
-      left: 0px;
-    }
-    to {
-      left: calc(40vh * -4); /* Ajusta según el número total de frames */
-    }
+
+  to {
+    left: calc(40vh * -4);
+    /* Ajusta según el número total de frames */
   }
+}
+
 .animation-3 {
-    position: relative;
-    width: calc(40vh * 6); /* Mantener proporción */
-    height: 40vh; /* Altura en función del viewport */
-    object-fit: fill;
-    animation: play-3 2.5s steps(6) infinite; /* 4 frames */
+  position: relative;
+  width: calc(40vh * 6);
+  /* Mantener proporción */
+  height: 40vh;
+  /* Altura en función del viewport */
+  object-fit: fill;
+  animation: play-3 2.5s steps(6) infinite;
+  /* 4 frames */
+}
+
+@keyframes play-3 {
+  from {
+    left: 0px;
   }
-  
-  @keyframes play-3 {
-    from {
-      left: 0px;
-    }
-    to {
-      left: calc(40vh * -6); /* Ajusta según el número total de frames */
-    }
+
+  to {
+    left: calc(40vh * -6);
+    /* Ajusta según el número total de frames */
   }
+}
+
 .animation-4 {
-    position: relative;
-    width: calc(40vh * 2); /* Mantener proporción */
-    height: 40vh; /* Altura en función del viewport */
-    object-fit: fill;
-    animation: play-4 1s steps(2) infinite; /* 4 frames */
+  position: relative;
+  width: calc(40vh * 2);
+  /* Mantener proporción */
+  height: 40vh;
+  /* Altura en función del viewport */
+  object-fit: fill;
+  animation: play-4 1s steps(2) infinite;
+  /* 4 frames */
+}
+
+@keyframes play-4 {
+  from {
+    left: 0px;
   }
-  
-  @keyframes play-4 {
-    from {
-      left: 0px;
-    }
-    to {
-      left: calc(40vh * -2); /* Ajusta según el número total de frames */
-    }
+
+  to {
+    left: calc(40vh * -2);
+    /* Ajusta según el número total de frames */
   }
+}

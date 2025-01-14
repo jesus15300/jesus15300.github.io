@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     child.classList.add('visible');
                     child.classList.remove('invisible');
                 });
-                
+
             } else {
                 // entry.target.classList.remove('visible');
                 // entry.target.classList.add('invisible');
@@ -29,14 +29,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     boxes.forEach(box => observer.observe(box));
 
-    
+
     /* Observador para los contenedores */
     const observerContainer = new IntersectionObserver((entries2) => {
         entries2.forEach(entry => {
             if (entry.isIntersecting) {
                 console.log(entry.target, 'Contenedor visible');
                 actualcontainer = entry.target;
-                if(isPresentationEnded){
+                if (isPresentationEnded) {
                     return;
                 }
                 timerForShowNextContainer();
@@ -59,6 +59,6 @@ function timerForShowNextContainer() {
         clearTimeout(actualTimeout);
     }
     actualTimeout = setTimeout(() => {
-            actualcontainer.nextElementSibling.scrollIntoView({ behavior: "smooth" });
+        actualcontainer.nextElementSibling.scrollIntoView({ behavior: "smooth" });
     }, 8000);
 }
