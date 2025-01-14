@@ -1,21 +1,26 @@
+
 .animation-1 {
-    width: calc(40vh * (400px / 400px)); /* Mantener proporción */
+  position: relative;
+    width: calc(40vh * 83); /* Mantener proporción */
     height: 40vh; /* Altura en función del viewport */
-    background-size: 100% auto; /* Escalar el ancho proporcionalmente */
+    object-fit: fill;
+    animation: play-1 3s steps(83) infinite; /* 4 frames */
+
+    /* width: calc(40vh * (400px / 400px)); 
+    height: 40vh; 
+    background-size: 100% auto;
     background: url('../img/plim-1.png') no-repeat;
 
-    animation: play-1 3s steps(83) infinite;
+    animation: play-1 3s steps(83) infinite; */
 }
 
 @keyframes play-1 {
-    from {
-        background-position: 0;
-    }
-
-    to {
-        background-position: -33200px;
-        /* Ancho total del sprite */
-    }
+  from {
+    left: 0px;
+  }
+  to {
+    left: calc(40vh * -83); /* Ajusta según el número total de frames */
+  }
 }
 .animation-container-2{
     position: absolute;
