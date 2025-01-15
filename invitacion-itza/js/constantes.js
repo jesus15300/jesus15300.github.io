@@ -1,1 +1,1 @@
-const apiUrl = 'https://jml5cpp5-7443.usw3.devtunnels.ms/';
+const apiUrl = 'https://able-secondly-gopher.ngrok-free.app/';
