@@ -1,0 +1,19 @@
+.sort{
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
+.sort select{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+.sort button{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}

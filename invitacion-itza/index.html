@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitacion Itza</title>
+    <title>Invitación Itza</title>
     <link rel="stylesheet" href="css/paper.css">
     <link rel="stylesheet" href="css/personalizado.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/jello-vertical.css">
     <link rel="stylesheet" href="css/wavy.css">
     <link rel="stylesheet" href="css/sprites.css">
+    <link rel="stylesheet" href="css/invitacion/shake.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css"
         integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,7 +30,7 @@
         <div class="z-background-0">
             <div class="d-flex flex-column size-100 position-absolute">
 
-                <video class="size-100 position-absolute fit-cover" autoplay muted loop preload="auto">
+                <video class="size-100 position-absolute fit-cover" autoplay muted loop preload="auto" style="overflow: none;">
                     <source src="videos/nature-caricature.mp4" type="video/mp4">
                     <source src="https://wallpapercave.com/wp/wp8592748.jpg">
                 </video>
@@ -57,7 +58,7 @@
                     class="fa fa-volume-up" aria-hidden="true" style="margin: auto;"></i></div>
             <div id="video-bg" class="position-absolute size-100 z-background-1">
                 <video class="size-100 d-flex position-absolute fit-cover" autoplay muted loop preload="true"
-                    style="height: 100vh;">
+                    style="height: 100vh; overflow: none;">
                     <source src="videos/Bg-invitacion.mp4" type="video/mp4">
                     <source src="https://i.pinimg.com/1200x/f3/6b/8a/f36b8ad4ada7d5c9b0c8fc58a4774274.jpg">
                 </video>
@@ -209,7 +210,7 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                         <a class="py-2"
                             href="https://www.google.com/maps?ll=19.464039,-97.683909&z=17&t=m&hl=es-419&gl=MX&mapclient=embed&q=19%C2%B027%2750.5%22N+97%C2%B040%2759.8%22W+19.464028,+-97.683278@19.4640278,-97.6832778">Click
-                            aqui si no vez el mapa</a>
+                            aquí si no vez el mapa</a>
                     </div>
                     <div class="text-center text-color-primary text-shadow-solid-black">
                         <p class="font-2 py-2">Confirma tu asistencia</p>
@@ -222,11 +223,11 @@
                         </form>
                     </div>
                     <div class="x-100 text-center pt-3">
-                        <a onclick="verGaleria()" class="heartbeat font-1 py-1">Ver galeria de Itzae</a>
+                        <a onclick="verGaleria()" class="heartbeat font-1 py-1">Ver galería de Itzae</a>
                     </div>
                 </div>
             </div>
-            <div class="screen-size d-flex flex-column" style="margin-top: 1px;" id="galeria">
+            <div class="screen-size d-flex flex-column position-relative" style="margin-top: 1px;" id="galeria">
                 <div class="box-observed">
                     <p
                         class="font-2 x-100 text-center text-color-primary text-shadow-solid-black p-1 invisible text-appear-right">
@@ -307,6 +308,9 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
+                </div>
+                <div class="footer">
+                    Hecho por <div class="shake-bottom" style="display: inline-block;">Jesús Emanuel S.</div>
                 </div>
             </div>
         </div>
