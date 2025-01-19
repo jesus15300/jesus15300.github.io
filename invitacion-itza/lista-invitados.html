@@ -169,9 +169,11 @@
       const info = document.getElementById("info");
       info.innerHTML = ` ${numeroConfirmados} invitados confirmados - ${numeroVisitas} vistas a la invitacion `;
     });
+    // Función para obtener un valor por defecto
     function getStringOrDefault(value, defaultValue) {
       return value ? value : defaultValue;
     }
+    // Función para dar formato a la fecha
     function stilizeDate(date) {
       const fecha = new Date(date); 
         const opciones = {
@@ -185,7 +187,7 @@
         let fechaFormateada = fecha.toLocaleDateString('es-MX', opciones);
       return date ? fechaFormateada : "No definido";
     }
-    
+    // funcion para poner mayuscula la primera letra de cada palabra
     Object.defineProperty(String.prototype, 'capitalize', {
       value: function(wordIndex = -1) {
         // Si wordIndex es -1, capitaliza todas las palabras

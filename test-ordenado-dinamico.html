@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Ordenado Dinámico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Confirmados</h1>
+    <label for="sortField">Ordenar por:</label>
+    <select id="sortField"></select>
+    
+    <table>
+        <thead>
+            <tr id="tableHeader"></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <script src="/get-invitados.js"></script>
+    <script>
+        const data = obtenerConfirmaciones(); // Función que obtiene los datos
+
+        const confirmados = data.confirmados;
+
+        // Detectar campos dinámicamente
+        const fields = Object.keys(confirmados[0]);
+        const flatFields = fields.filter(field => typeof confirmados[0][field] !== "object");
+
+        // Generar opciones para el selector
+        const sortField = document.getElementById("sortField");
+        flatFields.forEach(field => {
+            const option = document.createElement("option");
+            option.value = field;
+            option.textContent = field.charAt(0).toUpperCase() + field.slice(1);
+            sortField.appendChild(option);
+        });
+
+        // Generar encabezado de tabla
+        const tableHeader = document.getElementById("tableHeader");
+        flatFields.forEach(field => {
+            const th = document.createElement("th");
+            th.textContent = field.charAt(0).toUpperCase() + field.slice(1);
+            tableHeader.appendChild(th);
+        });
+
+        // Renderizar tabla
+        const renderTable = (sortedData) => {
+            const tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = ""; // Limpiar contenido previo
+            sortedData.forEach(item => {
+                const tr = document.createElement("tr");
+                flatFields.forEach(field => {
+                    const td = document.createElement("td");
+                    td.textContent = item[field] ?? "N/A";
+                    tr.appendChild(td);
+                });
+                tableBody.appendChild(tr);
+            });
+        };
+
+        // Ordenar y actualizar tabla
+        const sortAndRender = () => {
+            const field = sortField.value;
+            const sortedData = [...confirmados].sort((a, b) => {
+                if (a[field] === null || b[field] === null) return 0;
+                if (typeof a[field] === "string") {
+                    return a[field].localeCompare(b[field]);
+                }
+                return a[field] > b[field] ? 1 : -1;
+            });
+            renderTable(sortedData);
+        };
+
+        // Evento de cambio en el selector
+        sortField.addEventListener("change", sortAndRender);
+
+        // Inicialización
+        sortField.value = flatFields[0];
+        sortAndRender();
+    </script>
+</body>
+</html>
