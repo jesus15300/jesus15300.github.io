@@ -1,4 +1,4 @@
-let galeria = document.querySelector('#footer');
+let galeria = document.querySelector('#galeria');
 function verGaleria(){
     galeria.scrollIntoView({ behavior: "smooth" });
 }
