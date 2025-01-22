@@ -41,6 +41,7 @@ function main(loader) {
       document.getElementById("total-visitas").textContent = data.totalVisitas;
       document.getElementById("region-top").textContent = data.regionMasVisitada.region + " (" + data.regionMasVisitada.visitas + " visitas)";
       document.getElementById("ultima-region").textContent = data.ultimaRegion;
+      document.getElementById("ultima-ciudad").textContent = data.ultimaCiudad;
       document.getElementById("ultima-fecha").textContent = new Date(data.ultimaFecha).toLocaleString();
 
       // Gráfica de pastel - Distribución por región
