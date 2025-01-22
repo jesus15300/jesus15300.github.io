@@ -67,6 +67,30 @@ function main(loader) {
           },
         },
       });
+      // Gráfica de pastel - Distribución por ciudad
+      const ctxPie2 = document.getElementById("visitasPorCiudadChart").getContext("2d");
+      new Chart(ctxPie2, {
+        type: "pie",
+        data: {
+          labels: Object.keys(data.visitasPorCiudad),
+          datasets: [{
+            data: Object.values(data.visitasPorCiudad),
+            backgroundColor: ["#4CAF50", "#FF5722", "#3F51B5", "#FFC107", "#8E44AD", "#3498DB"],
+          }],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: "top",
+            },
+            title: {
+              display: true,
+              text: "Distribución de Visitas por Ciudad",
+            },
+          },
+        },
+      });
 
       // Gráfica de barras - Evolución de visitas en el tiempo
       const ctxBar = document.getElementById("visitasPorTiempoChart").getContext("2d");
