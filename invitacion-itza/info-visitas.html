@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Visitas</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+  <link rel="stylesheet" href="./css/lista-invitados/loader.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px auto;
+            padding: 15px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+        }
+        .summary div {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .chart-container {
+            margin: 20px auto;
+            max-width: 900px;
+        }
+        .chart {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-modal disabled" id="loader">
+        <div class="spinner">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    <h1>Dashboard de Visitas</h1>
+
+    <!-- Resumen -->
+    <div class="summary">
+        <div>
+            <h2>Total Visitas</h2>
+            <p id="total-visitas">Cargando...</p>
+        </div>
+        <div>
+            <h2>Región Más Visitada</h2>
+            <p id="region-top">Cargando...</p>
+        </div>
+        <div>
+            <h2>Última Región</h2>
+            <p id="ultima-region">Cargando...</p>
+        </div>
+        <div>
+            <h2>Última Fecha</h2>
+            <p id="ultima-fecha">Cargando...</p>
+        </div>
+    </div>
+
+    <!-- Gráficas -->
+    <div class="chart-container">
+        <div class="chart">
+            <canvas id="visitasPorRegionChart"></canvas>
+        </div>
+        <div class="chart">
+            <canvas id="visitasPorTiempoChart"></canvas>
+        </div>
+    </div>
+    <script src="./js/constantes.js"></script>
+    <script src="./js/obtener-resumen-visitas.js"></script>
+    <script>
+        const loader = document.getElementById("loader");
+        main(loader)
+    </script>
+</body>
+</html>
