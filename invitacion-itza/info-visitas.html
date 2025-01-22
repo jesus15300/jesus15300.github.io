@@ -11,8 +11,11 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
-            margin: 20px;
+            margin: 0;
             color: #333;
+        }
+        .container{
+            padding: 20px;
         }
         h1 {
             text-align: center;
@@ -41,6 +44,13 @@
         .chart {
             margin-bottom: 30px;
         }
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
     </style>
 </head>
 <body>
@@ -51,35 +61,39 @@
           <div class="circle"></div>
         </div>
       </div>
-    <h1>Dashboard de Visitas</h1>
-
-    <!-- Resumen -->
-    <div class="summary">
-        <div>
-            <h2>Total Visitas</h2>
-            <p id="total-visitas">Cargando...</p>
+      <header>
+        Resumen Visitas Invitacion
+      </header>
+    <div class="container">
+    
+        <!-- Resumen -->
+        <div class="summary">
+            <div>
+                <h2>Total Visitas</h2>
+                <p id="total-visitas">Cargando...</p>
+            </div>
+            <div>
+                <h2>Región Más Visitada</h2>
+                <p id="region-top">Cargando...</p>
+            </div>
+            <div>
+                <h2>Última Región</h2>
+                <p id="ultima-region">Cargando...</p>
+            </div>
+            <div>
+                <h2>Última Fecha</h2>
+                <p id="ultima-fecha">Cargando...</p>
+            </div>
         </div>
-        <div>
-            <h2>Región Más Visitada</h2>
-            <p id="region-top">Cargando...</p>
-        </div>
-        <div>
-            <h2>Última Región</h2>
-            <p id="ultima-region">Cargando...</p>
-        </div>
-        <div>
-            <h2>Última Fecha</h2>
-            <p id="ultima-fecha">Cargando...</p>
-        </div>
-    </div>
-
-    <!-- Gráficas -->
-    <div class="chart-container">
-        <div class="chart">
-            <canvas id="visitasPorRegionChart"></canvas>
-        </div>
-        <div class="chart">
-            <canvas id="visitasPorTiempoChart"></canvas>
+    
+        <!-- Gráficas -->
+        <div class="chart-container">
+            <div class="chart">
+                <canvas id="visitasPorRegionChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="visitasPorTiempoChart"></canvas>
+            </div>
         </div>
     </div>
     <script src="./js/constantes.js"></script>
