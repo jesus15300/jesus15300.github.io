@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+    <link rel="stylesheet" href="./css/intro/styles.css">
+    <link rel="stylesheet" href="./css/intro/stars-background.css">
+    <link rel="stylesheet" href="./css/intro/shooting-star.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/intro/animations/appear-left.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="stars-background">
+            <div class="shooting-star-wrapper">
+                <div class="shooting-star">
+                    <div class="star"></div>
+                </div>
+            </div>
+            <div class="stars-container">
+
+            </div>
+        </div>
+        <div class="content" id="content-principal">
+            <div class="texto-inicial box-observed">
+                <h1 class="appear-left invisible">Boda de Marlen y Ricardo</h1>
+                <p class="appear-down-5s invisible">Haz click en la estrella fugaz</p>
+            </div>
+        </div>
+        <!-- <div class="spacing"></div> -->
+        <div id="main" style="display: none;">
+            <div class="content" id="content-frase">
+                <div class="box-observed">
+                    <p class="appear-left invisible">Cuando tus estrellas coinciden con las mías, el universo brilla
+                        con
+                        nuestro amor</span>
+
+                </div>
+                <div class="box-observed">
+                    <h1 class="appear-right-4s invisible">¡Nos Casamos!</h1>
+                </div>
+                <div class="box-observed">
+                    <div class="appear-down-5s invisible">
+                        <video controls preload="auto" id="video-principal">
+                            <source src="./videos/video-1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <img class="img-luna" src="https://pngimg.com/uploads/moon/moon_PNG21.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./js/visibility-observer.js"></script>
+<script src="./js/stars/stars-behaviour.js"></script>
+
+
+</html>

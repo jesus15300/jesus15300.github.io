@@ -1,0 +1,131 @@
+.shooting-star-wrapper {
+    position: absolute;
+
+    height: calc(200vw + 80px);
+    width: 10px;
+
+    /* bottom: 0%; */
+    left: 105%;
+
+    transform: rotate(0deg);
+
+    overflow: visible;
+    border-radius: 50%;
+    justify-self: anchor-center;
+    align-self: anchor-center;
+
+    animation: rotate 20s ease-in-out infinite;
+    z-index: 10;
+}
+
+.shooting-star {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    /* top: 14%; */
+    left: 50%;
+    /* left: 14%; */
+    z-index: 15;
+    cursor: pointer;
+    pointer-events: visible;
+}
+
+.shooting-star .star {
+
+    background: white;
+    animation: star-blink 2s linear infinite;
+    border-radius: 50%;
+    filter: blur(4px);
+    width: 20px;
+    height: 20px;
+    z-index: -9;
+    box-shadow: 0 0 20px #006dff;
+
+    cursor: pointer;
+}
+
+.star-tail {
+    position: absolute;
+    background: #a3ceff88;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    filter: blur(3px);
+    animation: growAndShrink 5s linear;
+    z-index: -10;
+    cursor: pointer;
+    /* box-shadow: 0 0 5px #006effce; */
+}
+
+.shine {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    filter: blur(1px);
+    animation: star-blink 1s linear infinite;
+    z-index: -9;
+    cursor: pointer;
+    box-shadow: 0 0 20px #006dff;
+}
+
+
+
+@keyframes star-blink {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    80% {
+        transform: scale(1);
+    }
+
+    90% {
+        transform: scale(1.2);
+    }
+
+    95% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes growAndShrink {
+    0% {
+        transform: scale(0);
+    }
+
+    2% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+
+}
+
+@keyframes rotate {
+    0% {
+        /* transform: rotate(-27deg); */
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        /* transform: rotate(9deg); */
+        transform: rotate(0deg);
+    }
+
+}

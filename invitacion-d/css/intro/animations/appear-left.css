@@ -1,0 +1,36 @@
+.appear-left {
+    transition: opacity 2s ease, transform 2s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.appear-left.invisible {
+    opacity: 0;
+    transform: translateX(-50vh);
+}
+
+
+.appear-right-4s {
+    transition: opacity 2s ease, transform 2s ease-in-out;
+    transition-delay: 4s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.appear-right-4s.invisible {
+    opacity: 0;
+    transform: translateX(50vh);
+}
+
+
+.appear-down-5s {
+    transition: opacity 2s ease, transform 2s ease-in-out;
+    transition-delay: 5s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.appear-down-5s.invisible {
+    opacity: 0;
+    transform: translateY(50vh);
+}
