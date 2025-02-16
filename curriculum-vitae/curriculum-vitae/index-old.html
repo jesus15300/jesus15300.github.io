@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jesus Emanuel Salgado Lezama</h1>
+        <p>Lic. en Ingenieria en Tecnologias de la Informacion</p>
+    </header>
+    <section class="about-me">
+        <h2>Sobre Mí</h2>
+
+        <p style="display: flex;"><img src="img/profile-photo.jpg" alt="perfil"
+                style="height: 8em; margin-right: 10px;">Soy estudiante de la Benemérita Universidad Autónoma de Puebla,
+            y tengo una gran pasión por el desarrollo backend de servidores. Disfruto trabajando con lenguajes de
+            programación, como C#, así como cualquier otro que se presente en mi camino. Siempre estoy en busca de
+            oportunidades para aprender y perfeccionar mi lógica de programación, independientemente de la tecnología
+            que esté involucrada.</p>
+        <p>Además de mi interés en el desarrollo de servidores, me apasiona el mundo del desarrollo de aplicaciones de
+            ocio, como los videojuegos. Crear experiencias interactivas y divertidas es algo que me motiva y despierta
+            mi creatividad.</p>
+        <hr>
+        <h3>Habilidades</h3>
+
+        <ul>
+            <li>Desarrollo en C# .Net</li>
+            <li>Desarrollo en Python</li>
+            <li>Búsqueda y solución de problemas</li>
+            <li>Trabajo en equipo</li>
+            <li>Aprendizaje continuo</li>
+        </ul>
+        <hr>
+        <h3>Educación</h3>
+        <table>
+            <tr>
+                <td>2019 - Actualidad</td>
+                <td>Benemerita Universidad Autonoma de Puebla</td>
+                <td>Lic. en Ingenieria en Tecnologias de la Informacion</td>
+            </tr>
+
+        </table>
+
+        <hr>
+        <h3>Idiomas</h3>
+        <p><strong>Ingles: </strong>Basico.</p>
+        <p><strong>Español: </strong>Nativo.</p>
+        <hr>
+        <h3>Lenguajes de programacion</h3>
+        <p><strong>Lenguajes con los que mas he tenido experiencia: </strong>C#, PHP, Javascript, Java, SQL.</p>
+        <p><strong>Lenguajes con he interactuado un poco: </strong>Python, C, C++.</p>
+    </section>
+
+
+    <section class="projects">
+        <h2>Proyectos</h2>
+        <h3>Sistema de tutorados BUAP</h3>
+        <div class="center-div"><img src="img/Tutorados BUAP.png" alt="Clone Band"></div>
+        <p>Sistema de Gestion de tutorados es un sistema encargado de mostrar a un usuario Tutor toda la informacion
+            acerca de los alumnos que fueron asignados como sus tutorados.
+            <br><br>El sistema fue creado con PHP puro, HTML, JavaScript en conjunto con Ajax para interactuar con el
+            servidor.
+            <br><br>El sistema incluye dos vistas, una para el tutor y una para el tutorado.
+            <br><br>El tutor es capaz de agregar a sus tutorados asi como registrar a cada uno sus calificaciones en sus
+            respectivas materias, tambien el tutor es capaz de visualizar la informacion de su carrera, su porcentaje,
+            en que facultad estudia, y el mapa corricular del alumno de forma grafica.
+            <br><br>El alumno es capaz de visualizar su informacion en tiempo real asi como las materias que esta
+            cursando y las posibles del siguiente semestre tambien el alumno puede visualizar su mapa grafico que
+            incluye calificaciones y materias cursadas.
+        </p>
+        <br>
+        <p><strong>Enlace al servicio web: </strong><a
+                href="http://jesus153.atwebpages.com/Tutorados2/index.php">http://jesus153.atwebpages.com<br>/Tutorados2/buap.php</a>
+        </p>
+        <p><strong>Usuario: </strong>201928248</p>
+        <p><strong>Contraseña: </strong>12345678</p>
+        <!--  -->
+        <hr>
+        <h3>Clone Band</h3>
+        <div class="center-div"><img src="img/Cloneband.png" alt="Clone Band"></div>
+        <p>Clone band es un "videojuego" en desarrollo el cual intenta ser una copia del famoso videojuego llamado Rock
+            Band.
+            <br><br>Este videojuego es desarrollado en el motor grafico Unity en conjunto con el lenguaje C#.
+            <br><br>Actualmente el videojuego ya realiza una lectura de un archivo midi que puede estar ubicado en
+            cualquier lugar del disco duro y proporcionar toda la informacion de los objetos que se debe de instanciar a
+            lo largo de una cancion.
+            <br><br>Otra de las funcionalidades que ya se tiene es la funcion de cargar todos las pistas de audio
+            existentes en la ruta seleccionada para asi asignarlas a una mezcladora de audio de cada respectivo
+            instrumento.
+            <br><br>El videojuego tambien es capaz de calcular cada uno de los "Beats" del metronomo para asi guiar al
+            jugador visual y auditivamente.
+            <br><br>De momento solo se puede interactuar con el videojuego con un teclado para rasguear las notas y asi
+            mostrar las animaciones que se tienen hechas, en lo que se desarrolla un sistema de imput para diversos
+            perifericos.
+        </p>
+        <div class="center-div"><video controls width="90%" height="auto">
+                <source src="video/cloneband.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de videos.
+            </video></div>
+        <div class="center-div">
+            <p><i>Desmostracion de Clone Band</i></p>
+        </div>
+
+        <br>
+
+        <!-- otro proyecto -->
+        <hr>
+        <h3>MidiSplitter</h3>
+        <div class="center-div"><img src="img/MidiSplitter.png" alt="MidiSplitter"></div><br>
+
+        <p>MidiSplitter es un proyecto que realice cuando realizaba transmisiones en vivo tocando la bateria electrica,
+            este proyecto fue creado en el lenguaje de c# usando la libreria TeVirtualMidi. <br><br>
+            Esta herramienta surgio cuando necesitaba mi instrumento digital en varios programas de audio, pero no
+            existe programa que me permita compartir mi bateria con dos o mas editores de audio y que en terminos de
+            latencia sea inaudible,
+            asi que cree este programa que me permite escuchar mi bateria en un editor de audio asi como jugar un juego
+            con ella.
+            <br><br>El programa obtiene los diversos dispositivos midi que tengo y despues me permite transmitirlo en
+            los dispositivos virtuales que le nombre.
+        </p>
+        <div class="center-div"><img src="img/MidiReaper.png" alt="MidiSplitter"></div>
+        <div class="center-div">
+            <p><i>Dispositivos creados con el formulario</i></p>
+        </div>
+        <br>
+    </section>
+    <footer>
+        <p>Contacto: </p>
+        <p>jesus_emanuel_live@hotmail.com</p>
+        <p>2214394360</p>
+
+    </footer>
+</body>
+
+</html>

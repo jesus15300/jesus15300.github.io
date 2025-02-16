@@ -42,7 +42,7 @@
 <body>
 
     <div class="main-container">
-        <div class="stars-background">
+        <!-- <div class="stars-background">
             <div class="shooting-star-wrapper">
                 <div class="shooting-star">
                     <div class="star"></div>
@@ -57,9 +57,9 @@
                 <h1 class="appear-left invisible text-white font-secondary">Boda de Marlén y Ricardo</h1>
                 <p class="appear-down-5s invisible text-white">Haz click en la estrella fugaz</p>
             </div>
-        </div>
+        </div> -->
         <!-- <div class="spacing"></div> -->
-        <div id="main" style="display: none;">
+        <div id="main" style="display: block;">
             <!-- Navbar Start -->
             <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
                 <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -307,6 +307,139 @@
                     </div>
                 </div>
                 <!-- About End -->
+
+                <!-- Encuesta Start -->
+                <div class="container-fluid py-5" id="rsvp">
+                    <div class="container py-5">
+                        <div class="section-title position-relative text-center">
+                            <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Encuesta</h6>
+                            <h1 class="font-secondary text-white display-4">Necesitamos tu confirmación</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="text-center">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-6">
+                                                <input type="text" class="form-control bg-dark border-0 py-4 px-3"
+                                                    placeholder="Tu nombre" name="nombre" required />
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <input type="email" class="form-control bg-dark border-0 py-4 px-3"
+                                                    placeholder="Tu Email" name="email" required />
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <select class="form-control bg-dark border-0" style="height: 52px;"
+                                                    name=" asistencia" required>
+                                                    <option value="" selected disabled>Selecciona una opción</option>
+                                                    <option value="asistire">Asistiré</option>
+                                                    <option value="no-asistire">No asistiré</option>
+                                                    <option value="aun-no-se">Aún no lo sé</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <select class="form-control bg-dark border-0" style="height: 52px;"
+                                                    name="acompanantes" required>
+                                                    <option value="" selected disabled>Numero de acompañantes</option>
+                                                    <option value="0">0</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12 col-lg-6">
+                                                <select class="form-control bg-dark border-0" style="height: 52px;"
+                                                    name="generoMusical" required>
+                                                    <option value="" selected disabled>Genero musical preferido</option>
+                                                    <option value="salsa">Salsa</option>
+                                                    <option value="cumbia">Cumbia</option>
+                                                    <option value="bachata">Bachata</option>
+                                                    <option value="disco">Disco</option>
+                                                    <option value="norteño">Norteño</option>
+                                                    <option value="otro">Otro</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-sm-12 col-lg-6">
+                                                <select class="form-control bg-dark border-0" style="height: 52px;"
+                                                    name="bebidaPreferencia" required>
+                                                    <option value="" selected disabled>Bebida de preferencia</option>
+                                                    <option value="tequila">Tequila</option>
+                                                    <option value="whisky">Whisky</option>
+                                                    <option value="ron">Ron</option>
+                                                    <option value="cerveza">Cerveza</option>
+                                                    <option value="vodka">Vodka</option>
+                                                    <option value="otro">Otro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <textarea class="form-control bg-dark border-0 py-2 px-3" rows="5"
+                                                placeholder="Algún mensaje para nosotros" name="mensaje"
+                                                required></textarea>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input bg-warning"
+                                                        id="recordatorio" name="recibirRecordatorio">
+                                                    <label class="custom-control-label text-white" for="recordatorio">
+                                                        Quiero recibir recordatorios por
+                                                        correo
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="btn btn-warning font-weight-bold py-3 px-5"
+                                                type="submit">Enviar</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Encuesta End -->
+
+                <!-- Footer Start -->
+                <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+                    <div class="container text-center py-5">
+                        <div class="section-title position-relative text-center">
+                            <h1 class="font-secondary display-3 text-white">¡Gracias!</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="d-flex justify-content-center mb-4">
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
+                                href="https://www.facebook.com/jesusemanuel.salgadolezama"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="d-flex justify-content-center py-2">
+                            <p class="text-white" href="#">jesus_emanuel_live@hotmail.com</p>
+                            <span class="px-3">|</span>
+                            <p class="text-white" href="#">221439360</p>
+                        </div>
+                        <p class="m-0">&copy; <a class="text-warning" href="#">Jesus153</a>. hecho por <a
+                                class="text-warning" href="https://jesus15300.github.io/curriculum-vitae/">Jesus Emanuel
+                                Salgado Lezama</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Footer End -->
             </div>
         </div>
     </div>
