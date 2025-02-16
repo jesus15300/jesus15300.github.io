@@ -9,6 +9,17 @@
     transform: translateX(-50vh);
 }
 
+.appear-right {
+    transition: opacity 2s ease, transform 2s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.appear-right.invisible {
+    opacity: 0;
+    transform: translateX(50vh);
+}
+
 
 .appear-right-4s {
     transition: opacity 2s ease, transform 2s ease-in-out;

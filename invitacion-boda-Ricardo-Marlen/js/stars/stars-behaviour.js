@@ -54,6 +54,8 @@ star.addEventListener('click', () => {
     shootingStarWrapper.style.display = 'none';
     document.querySelector('#content-principal').style.display = 'none';
     document.querySelector('#main').style.display = 'block';
+    const fondo = document.querySelector('.stars-background');
+    fondo.style.zIndex = '-1';
 })
 
 

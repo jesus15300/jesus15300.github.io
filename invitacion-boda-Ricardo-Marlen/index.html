@@ -74,6 +74,8 @@
                         <a href="#fecha" class="nav-item nav-link">Fecha</a>
                         <a href="#galeria" class="nav-item nav-link">Galería</a>
                         <a href="#padres" class="nav-item nav-link">Padres</a>
+                        <a href="#encuesta" class="nav-item nav-link">Encuesta</a>
+                        <a href="#contact" class="nav-item nav-link">Contacto</a>
                     </div>
                     <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                         <h1 class="font-secondary text-white mb-n2">Ricardo <span class="text-warning">&</span> Marlén
@@ -106,7 +108,7 @@
             </div>
 
             <!-- Seccion de la fecha -->
-            <div class="container-fluid py-5 mb-5" id="fecha">
+            <div class="container-fluid py-5 mb-5 overflow-hidden" id="fecha">
                 <div class="container py-5">
                     <div class="section-title position-relative text-center">
                         <h1 class="font-secondary display-4 text-white">Fecha</h1>
@@ -114,42 +116,46 @@
                     </div>
                     <div class="text-center">
                         <h3 class="text-white font-secondary">2 de Agosto de 2025</h3>
-                        <div class="row m-0 mt-4 w-100 justify-content-center">
-                            <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
-                                <div class="bg-dark p-4">
-                                    <h3 class="text-white font-secondary font-weight-normal">Meses</h3>
-                                    <h3 id="meses" class="text-white
-                                    font-secondary font-weight-normal">000</h3>
+                        <div class="box-observed">
+                            <div class="row m-0 mt-4 w-100 justify-content-center appear-left invisible">
+                                <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
+                                    <div class="bg-dark p-4">
+                                        <h3 class="text-white font-secondary font-weight-normal">Meses</h3>
+                                        <h3 id="meses" class="text-white
+                                                                font-secondary font-weight-normal">000</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
-                                <div class="bg-dark p-4">
-                                    <h3 class="text-white font-secondary font-weight-normal">Días</h3>
-                                    <h3 id="dias" class="text-white
-                                    font-secondary font-weight-normal">000</h3>
+                                <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
+                                    <div class="bg-dark p-4">
+                                        <h3 class="text-white font-secondary font-weight-normal">Días</h3>
+                                        <h3 id="dias" class="text-white
+                                                                font-secondary font-weight-normal">000</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row m-0 mt-0 w-100 justify-content-center">
-                            <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
-                                <div class="bg-dark p-4 ">
-                                    <h3 class="text-white font-secondary font-weight-normal">Horas</h3>
-                                    <h3 id="horas" class="text-white
-                                    font-secondary font-weight-normal">000</h3>
+                        <div class="box-observed">
+                            <div class="row m-0 mt-0 w-100 justify-content-center appear-right invisible">
+                                <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                    <div class="bg-dark p-4 ">
+                                        <h3 class="text-white font-secondary font-weight-normal">Horas</h3>
+                                        <h3 id="horas" class="text-white
+                                                                font-secondary font-weight-normal">000</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
-                                <div class="bg-dark p-4">
-                                    <h3 class="text-white font-secondary font-weight-normal">Minutos</h3>
-                                    <h3 id="minutos" class="text-white
-                                    font-secondary font-weight-normal">000</h3>
+                                <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                    <div class="bg-dark p-4">
+                                        <h3 class="text-white font-secondary font-weight-normal">Minutos</h3>
+                                        <h3 id="minutos" class="text-white
+                                                                font-secondary font-weight-normal">000</h3>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
-                                <div class="bg-dark p-4">
-                                    <h3 class="text-white font-secondary font-weight-normal">Segundos</h3>
-                                    <h3 id="segundos" class="text-white
-                                    font-secondary font-weight-normal">000</h3>
+                                <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                    <div class="bg-dark p-4">
+                                        <h3 class="text-white font-secondary font-weight-normal">Segundos</h3>
+                                        <h3 id="segundos" class="text-white
+                                                                font-secondary font-weight-normal">000</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,8 +274,8 @@
                             <h1 class="font-secondary display-4 text-white">Nuestros padres</h1>
                             <i class="far fa-heart text-white"></i>
                         </div>
-                        <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
-                            <div class="col-md-6 p-0 text-center text-md-right">
+                        <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0 box-observed">
+                            <div class="col-md-6 p-0 text-center text-md-right appear-left invisible">
                                 <div
                                     class="h-100 d-flex flex-column justify-content-center bg-dark p-4 border-top border-warning">
                                     <h3 class="text-white font-secondary font-weight-normal">
@@ -286,7 +292,7 @@
 
                                 </div>
                             </div>
-                            <div class="col-md-6 p-0 text-center text-md-left">
+                            <div class="col-md-6 p-0 text-center text-md-left appear-right invisible">
                                 <div
                                     class="h-100 d-flex flex-column justify-content-center bg-dark p-4 border-top border-warning">
                                     <h3 class="text-white font-secondary font-weight-normal">
@@ -309,7 +315,7 @@
                 <!-- About End -->
 
                 <!-- Encuesta Start -->
-                <div class="container-fluid py-5" id="rsvp">
+                <div class="container-fluid py-5" id="encuesta">
                     <div class="container py-5">
                         <div class="section-title position-relative text-center">
                             <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Encuesta</h6>
@@ -322,18 +328,21 @@
                                     <form>
                                         <div class="form-row">
                                             <div class="form-group col-sm-6">
-                                                <input type="text" class="form-control bg-dark border-0 py-4 px-3"
+                                                <input type="text"
+                                                    class="form-control bg-dark border-0 py-4 px-3 text-white"
                                                     placeholder="Tu nombre" name="nombre" required />
                                             </div>
                                             <div class="form-group col-sm-6">
-                                                <input type="email" class="form-control bg-dark border-0 py-4 px-3"
+                                                <input type="email"
+                                                    class="form-control bg-dark border-0 py-4 px-3 text-white"
                                                     placeholder="Tu Email" name="email" required />
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-sm-12">
-                                                <select class="form-control bg-dark border-0" style="height: 52px;"
-                                                    name=" asistencia" required>
+                                                <select class="form-control bg-dark border-0 text-white"
+                                                    style="height: 52px;" name="asistencia" id="asistencia" required
+                                                    onchange="onAsistenciaChange()">
                                                     <option value="" selected disabled>Selecciona una opción</option>
                                                     <option value="asistire">Asistiré</option>
                                                     <option value="no-asistire">No asistiré</option>
@@ -342,56 +351,62 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-row">
-                                            <div class="form-group col-sm-12">
-                                                <select class="form-control bg-dark border-0" style="height: 52px;"
-                                                    name="acompanantes" required>
-                                                    <option value="" selected disabled>Numero de acompañantes</option>
-                                                    <option value="0">0</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                </select>
+                                        <div class="" id="asistencia-si" style="display: none;">
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-12">
+                                                    <select class="form-control bg-dark border-0 text-white"
+                                                        style="height: 52px;" name="acompanantes" required>
+                                                        <option value="" selected disabled>Numero de acompañantes
+                                                        </option>
+                                                        <option value="0">0</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-sm-12 col-lg-6">
+                                                    <select class="form-control bg-dark border-0 text-white"
+                                                        style="height: 52px;" name="generoMusical" required>
+                                                        <option value="" selected disabled>Genero musical preferido
+                                                        </option>
+                                                        <option value="salsa">Salsa</option>
+                                                        <option value="cumbia">Cumbia</option>
+                                                        <option value="bachata">Bachata</option>
+                                                        <option value="disco">Disco</option>
+                                                        <option value="norteño">Norteño</option>
+                                                        <option value="otro">Otro</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-sm-12 col-lg-6">
+                                                    <select class="form-control bg-dark border-0 text-white"
+                                                        style="height: 52px;" name="bebidaPreferencia" required>
+                                                        <option value="" selected disabled>Bebida de preferencia
+                                                        </option>
+                                                        <option value="tequila">Tequila</option>
+                                                        <option value="whisky">Whisky</option>
+                                                        <option value="ron">Ron</option>
+                                                        <option value="cerveza">Cerveza</option>
+                                                        <option value="vodka">Vodka</option>
+                                                        <option value="otro">Otro</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control bg-dark border-0 py-2 px-3 text-white"
+                                                    rows="5" placeholder="Algún mensaje para nosotros" name="mensaje"
+                                                    required></textarea>
                                             </div>
                                         </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-sm-12 col-lg-6">
-                                                <select class="form-control bg-dark border-0" style="height: 52px;"
-                                                    name="generoMusical" required>
-                                                    <option value="" selected disabled>Genero musical preferido</option>
-                                                    <option value="salsa">Salsa</option>
-                                                    <option value="cumbia">Cumbia</option>
-                                                    <option value="bachata">Bachata</option>
-                                                    <option value="disco">Disco</option>
-                                                    <option value="norteño">Norteño</option>
-                                                    <option value="otro">Otro</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-sm-12 col-lg-6">
-                                                <select class="form-control bg-dark border-0" style="height: 52px;"
-                                                    name="bebidaPreferencia" required>
-                                                    <option value="" selected disabled>Bebida de preferencia</option>
-                                                    <option value="tequila">Tequila</option>
-                                                    <option value="whisky">Whisky</option>
-                                                    <option value="ron">Ron</option>
-                                                    <option value="cerveza">Cerveza</option>
-                                                    <option value="vodka">Vodka</option>
-                                                    <option value="otro">Otro</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <textarea class="form-control bg-dark border-0 py-2 px-3" rows="5"
-                                                placeholder="Algún mensaje para nosotros" name="mensaje"
-                                                required></textarea>
-                                        </div>
-                                        <div class="form-row">
+                                        <div class="form-row" id="recordatorio" style="display: none;">
                                             <div class="form-group col-sm-12">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input bg-warning"
+                                                    <input type="checkbox"
+                                                        class="custom-control-input bg-warning form-control-lg"
                                                         id="recordatorio" name="recibirRecordatorio">
                                                     <label class="custom-control-label text-white" for="recordatorio">
                                                         Quiero recibir recordatorios por
@@ -423,15 +438,18 @@
                             <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
                                 href="https://www.facebook.com/jesusemanuel.salgadolezama"><i
                                     class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i
+                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
+                                href="https://www.linkedin.com/in/jesús-emanuel-salgado-lezama-2224b5193"><i
                                     class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-lg btn-outline-light btn-lg-square" href="#"><i
+                            <a class="btn btn-lg btn-outline-light btn-lg-square"
+                                href="https://www.instagram.com/jesus1530?igsh=dXA5bHBuaXoxMmZl"><i
                                     class="fab fa-instagram"></i></a>
                         </div>
                         <div class="d-flex justify-content-center py-2">
-                            <p class="text-white" href="#">jesus_emanuel_live@hotmail.com</p>
+                            <a class="text-warning"
+                                href="mailto:jesus_emanuel_live@hotmail.com">jesus_emanuel_live@hotmail.com</a>
                             <span class="px-3">|</span>
-                            <p class="text-white" href="#">221439360</p>
+                            <a class="text-warning" href="tel:221439360">221439360</a>
                         </div>
                         <p class="m-0">&copy; <a class="text-warning"
                                 href="https://jesus15300.github.io/curriculum-vitae/">Jesus153</a>. hecho por <a
@@ -467,6 +485,7 @@
 <script src="./js/visibility-observer.js"></script>
 <script src="./js/stars/stars-behaviour.js"></script>
 <script src="./js/contador.js"></script>
+<script src="./js/formulario.js"></script>
 <script src="./js/main.js"></script>
 
 
