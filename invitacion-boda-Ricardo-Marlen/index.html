@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro</title>
+
+
+    <!-- Recursos plantilla boda -->
+    <!-- Favicon -->
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../resources/components-boda-1/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../resources/components-boda-1/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../resources/components-boda-1/css/style.css" rel="stylesheet">
+
+    <!-- Fin recursos invitacion boda -->
+
+    <!-- mis recursos -->
     <link rel="stylesheet" href="./css/intro/styles.css">
     <link rel="stylesheet" href="./css/intro/stars-background.css">
     <link rel="stylesheet" href="./css/intro/shooting-star.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/intro/animations/appear-left.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- Fin mis recursos -->
 </head>
 
 <body>
+
     <div class="main-container">
         <div class="stars-background">
             <div class="shooting-star-wrapper">
@@ -26,21 +54,46 @@
         </div>
         <div class="content" id="content-principal">
             <div class="texto-inicial box-observed">
-                <h1 class="appear-left invisible">Boda de Marlen y Ricardo</h1>
-                <p class="appear-down-5s invisible">Haz click en la estrella fugaz</p>
+                <h1 class="appear-left invisible text-white font-secondary">Boda de Marlén y Ricardo</h1>
+                <p class="appear-down-5s invisible text-white">Haz click en la estrella fugaz</p>
             </div>
         </div>
         <!-- <div class="spacing"></div> -->
-        <div id="main" style="display: none;">
+        <div id="main" style="display: block;">
+            <!-- Navbar Start -->
+            <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="font-secondary text-white mb-n2">Ricardo <span class="text-warning">&</span> Marlén</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="#content-frase" class="nav-item nav-link">Presentación</a>
+                        <a href="#fecha" class="nav-item nav-link">Fecha</a>
+                        <a href="#galeria" class="nav-item nav-link">Galería</a>
+                        <a href="#padres" class="nav-item nav-link">Padres</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="font-secondary text-white mb-n2">Ricardo <span class="text-warning">&</span> Marlén
+                        </h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
             <div class="content" id="content-frase">
                 <div class="box-observed">
-                    <p class="appear-left invisible">Cuando tus estrellas coinciden con las mías, el universo brilla
+                    <h3 class="appear-left invisible text-white font-secondary ">
+                        Cuando tus estrellas coinciden con las mías, el universo brilla
                         con
-                        nuestro amor</span>
+                        nuestro amor</h3>
 
                 </div>
                 <div class="box-observed">
-                    <h1 class="appear-right-4s invisible">¡Nos Casamos!</h1>
+                    <h1 class="appear-right-4s invisible text-white font-secondary ">¡Nos Casamos!</h1>
                 </div>
                 <div class="box-observed">
                     <div class="appear-down-5s invisible">
@@ -51,12 +104,236 @@
                 </div>
                 <img class="img-luna" src="https://pngimg.com/uploads/moon/moon_PNG21.png" alt="">
             </div>
+
+            <!-- Seccion de la fecha -->
+            <div class="container-fluid py-5 mb-5" id="fecha">
+                <div class="container py-5">
+                    <div class="section-title position-relative text-center">
+                        <h1 class="font-secondary display-4 text-white">Fecha</h1>
+                        <i class="far fa-heart text-white"></i>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-white font-secondary">2 de Agosto de 2025</h3>
+                        <div class="row m-0 mt-4 w-100 justify-content-center">
+                            <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
+                                <div class="bg-dark p-4">
+                                    <h3 class="text-white font-secondary font-weight-normal">Meses</h3>
+                                    <h3 id="meses" class="text-white
+                                    font-secondary font-weight-normal">000</h3>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
+                                <div class="bg-dark p-4">
+                                    <h3 class="text-white font-secondary font-weight-normal">Días</h3>
+                                    <h3 id="dias" class="text-white
+                                    font-secondary font-weight-normal">000</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 mt-0 w-100 justify-content-center">
+                            <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                <div class="bg-dark p-4 ">
+                                    <h3 class="text-white font-secondary font-weight-normal">Horas</h3>
+                                    <h3 id="horas" class="text-white
+                                    font-secondary font-weight-normal">000</h3>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                <div class="bg-dark p-4">
+                                    <h3 class="text-white font-secondary font-weight-normal">Minutos</h3>
+                                    <h3 id="minutos" class="text-white
+                                    font-secondary font-weight-normal">000</h3>
+                                </div>
+                            </div>
+                            <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                <div class="bg-dark p-4">
+                                    <h3 class="text-white font-secondary font-weight-normal">Segundos</h3>
+                                    <h3 id="segundos" class="text-white
+                                    font-secondary font-weight-normal">000</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Seccion de la fecha -->
+
+            <!-- Seccion Galeria -->
+            <div class="container-fluid bg-gallery-rym" id="galeria" style="padding: 0 0; margin: 0 0;">
+                <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
+                    <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Fotos</h6>
+                    <h1 class="font-secondary display-4 text-white">Nuestra Galeria de Fotos</h1>
+                    <i class="far fa-heart text-white"></i>
+                </div>
+                <div class="owl-carousel gallery-carousel">
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-1.jpeg" alt="" style="height: 100%;">
+                        <a href="img/imagen-1.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-2.jpeg" alt="">
+                        <a href="img/imagen-2.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-3.jpeg" alt="">
+                        <a href="img/imagen-3.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-4.jpeg" alt="">
+                        <a href="img/imagen-4.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-5.jpeg" alt="">
+                        <a href="img/imagen-5.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-6.jpeg" alt="">
+                        <a href="img/imagen-6.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-7.jpeg" alt="">
+                        <a href="img/imagen-7.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-8.jpeg" alt="">
+                        <a href="img/imagen-8.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-9.jpeg" alt="">
+                        <a href="img/imagen-9.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-10.jpeg" alt="">
+                        <a href="img/imagen-10.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-11.jpeg" alt="">
+                        <a href="img/imagen-11.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-12.jpeg" alt="">
+                        <a href="img/imagen-12.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-13.jpeg" alt="">
+                        <a href="img/imagen-13.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-14.jpeg" alt="">
+                        <a href="img/imagen-14.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                    <div class="gallery-item">
+                        <img class="img-fluid w-100" src="img/imagen-15.jpeg" alt="">
+                        <a href="img/imagen-15.jpeg" data-lightbox="gallery">
+                            <i class="fa fa-2x fa-plus text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Galeria -->
+
+            <div class="content" id="padres">
+                <!-- About Start -->
+                <div class="container-fluid py-o" id="about">
+                    <div class="container py-5">
+                        <div class="section-title position-relative text-center">
+                            <h1 class="font-secondary display-4 text-white">Nuestros padres</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0">
+                            <div class="col-md-6 p-0 text-center text-md-right">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center bg-dark p-4 border-top border-warning">
+                                    <h3 class="text-white font-secondary font-weight-normal">
+                                        Abel Alonso Hernandez
+                                        <i class="fa fa-male text-warning pl-3"></i>
+                                    </h3>
+                                    <h3 class="text-white font-secondary font-weight-normal">
+                                        Angélica Ortega Alegría
+                                        <i class="fa fa-female text-warning pl-3"></i>
+                                    </h3>
+                                    <h3 class="font-secondary font-weight-normal text-muted mb-3">
+                                        Padres de Marlén
+                                    </h3>
+
+                                </div>
+                            </div>
+                            <div class="col-md-6 p-0 text-center text-md-left">
+                                <div
+                                    class="h-100 d-flex flex-column justify-content-center bg-dark p-4 border-top border-warning">
+                                    <h3 class="text-white font-secondary font-weight-normal">
+                                        Ricardo Velazquez Santiago
+                                        <i class="fa fa-male text-warning pl-3"></i>
+                                    </h3>
+                                    <h3 class="text-white font-secondary font-weight-normal">
+                                        Olga Sanchez Rivera
+                                        <i class="fa fa-female text-warning pl-3"></i>
+                                    </h3>
+                                    <h3 class="font-secondary font-weight-normal text-muted mb-3">
+                                        Padres de Ricardo
+                                    </h3>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- About End -->
+            </div>
         </div>
     </div>
 
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-outline-warning btn-lg-square back-to-top"><i
+            class="fa fa-angle-double-up"></i></a>
+
+    <!-- Recursos Js invitacion Boda -->
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../resources/components-boda-1/lib/easing/easing.min.js"></script>
+    <script src="../resources/components-boda-1/lib/waypoints/waypoints.min.js"></script>
+    <script src="../resources/components-boda-1/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../resources/components-boda-1/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../resources/components-boda-1/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../resources/components-boda-1/js/main.js"></script>
+
+    <!-- Fin Recursos Js invitacion Boda -->
 </body>
 <script src="./js/visibility-observer.js"></script>
 <script src="./js/stars/stars-behaviour.js"></script>
+<script src="./js/contador.js"></script>
+<script src="./js/main.js"></script>
 
 
 </html>
