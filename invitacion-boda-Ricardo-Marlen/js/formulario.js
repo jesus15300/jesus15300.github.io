@@ -119,7 +119,7 @@ async function confirmarAsistencia(data) {
         if (response.ok) {
             const result = await response.json();
             alert('Confirmacion enviada, gracias por confirmar tu asistencia :)');
-            localStorage.setItem('confirmacion', JSON.stringify(data));
+            localStorage.setItem('confirmacion' + idInvitacion, JSON.stringify(data));
 
 
         } else {
