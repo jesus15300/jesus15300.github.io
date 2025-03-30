@@ -7,8 +7,8 @@
 
 .background-star {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: 5px;
+    height: 5px;
     background: #FFF;
     border-radius: 50%;
     animation: animate 10s linear infinite;

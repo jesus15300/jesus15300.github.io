@@ -13,3 +13,4 @@ function asignarTiempoRestante() {
 }
 
 setInterval(asignarTiempoRestante, 1000);
+

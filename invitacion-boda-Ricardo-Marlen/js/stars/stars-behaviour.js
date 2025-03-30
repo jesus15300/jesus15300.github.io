@@ -23,7 +23,7 @@ function createStar() {
     }, starLifeTime);
 
 }
-setInterval(createStar, tailCreationInterval)
+setInterval(createStar, 70)
 
 const star = document.querySelector('.shooting-star');
 function createTail() {
@@ -54,8 +54,11 @@ star.addEventListener('click', () => {
     shootingStarWrapper.style.display = 'none';
     document.querySelector('#content-principal').style.display = 'none';
     document.querySelector('#main').style.display = 'block';
+    document.querySelector('#btn-volume').style.display = 'block';
     const fondo = document.querySelector('.stars-background');
     fondo.style.zIndex = '-1';
+
+    playSong(0);
 })
 
 

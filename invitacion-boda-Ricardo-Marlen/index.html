@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./css/intro/stars-background.css">
     <link rel="stylesheet" href="./css/intro/shooting-star.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/font-sizes.css">
     <link rel="stylesheet" href="./css/intro/animations/appear-left.css">
     <link rel="stylesheet" href="./css/styles.css">
 
@@ -40,9 +41,11 @@
 </head>
 
 <body>
-
+    <div id="btn-volume" class="button-volume position-fixed border border-warning" onclick="changeVolume(this)"
+        style="display: none;"><i class="fa fa-volume-up" aria-hidden="true" style="margin: auto;"></i>
+    </div>
     <div class="main-container">
-        <div class="stars-background">
+        <div class="stars-background" style="display: none">
             <div class="shooting-star-wrapper">
                 <div class="shooting-star">
                     <div class="star"></div>
@@ -52,14 +55,17 @@
 
             </div>
         </div>
-        <div class="content" id="content-principal">
+        <!-- <div class="content" id="content-principal">
             <div class="texto-inicial box-observed">
-                <h1 class="appear-left invisible text-white font-secondary">Boda de Marlén y Ricardo</h1>
+                <h1 class="appear-left invisible text-white font-secondary fs-3">Boda de Marlén y Ricardo</h1>
                 <p class="appear-down-5s invisible text-white">Haz click en la estrella fugaz</p>
             </div>
-        </div>
+        </div> -->
+
         <!-- <div class="spacing"></div> -->
-        <div id="main" style="display: none;">
+        <div id="main" style="display: block;">
+
+
             <!-- Navbar Start -->
             <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
                 <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -86,16 +92,19 @@
                 </div>
             </nav>
             <!-- Navbar End -->
+            <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                class="img-background opacity-40 blur-4" alt="">
             <div class="content" id="content-frase">
                 <div class="box-observed">
-                    <h3 class="appear-left invisible text-white font-secondary ">
+                    <h3 class="appear-left invisible text-white font-secondary fs-2">
                         Cuando tus estrellas coinciden con las mías, el universo brilla
                         con
                         nuestro amor</h3>
 
                 </div>
                 <div class="box-observed">
-                    <h1 class="appear-right-4s invisible text-white font-secondary ">¡Nos Casamos!</h1>
+                    <h1 class="appear-right-4s invisible text-white font-secondary fs-4">¡Nos Casamos!</h1>
+                    <h1 class="appear-right-4s invisible text-white font-secondary fs-1">Ricardo & Marlén</h1>
                 </div>
                 <div class="box-observed">
                     <div class="appear-down-5s invisible">
@@ -105,56 +114,62 @@
                     </div>
                 </div>
                 <img class="img-luna" src="https://pngimg.com/uploads/moon/moon_PNG21.png" alt="">
+
             </div>
 
             <!-- Seccion de la fecha -->
-            <div class="container-fluid py-5 mb-5 overflow-hidden" id="fecha">
-                <div class="container py-5">
-                    <div class="section-title position-relative text-center">
-                        <h1 class="font-secondary display-4 text-white">Fecha</h1>
-                        <i class="far fa-heart text-white"></i>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-white font-secondary">2 de Agosto de 2025</h3>
-                        <div class="box-observed">
-                            <div class="row m-0 mt-4 w-100 justify-content-center appear-left invisible">
-                                <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
-                                    <div class="bg-dark p-4">
-                                        <h3 class="text-white font-secondary font-weight-normal">Meses</h3>
-                                        <h3 id="meses" class="text-white
-                                                                font-secondary font-weight-normal">000</h3>
+            <div class="">
+
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <div class="content container container-fluid py-5 mb-5" id="fecha">
+                    <div class="">
+                        <div class="section-title position-relative text-center">
+                            <h1 class="font-secondary display-4 text-white">Fecha</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-white font-secondary fs-3">2 de Agosto de 2025</h3>
+                            <div class="box-observed">
+                                <div class="row m-0 mt-4 w-100 justify-content-center appear-left invisible">
+                                    <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
+                                        <div class="bg-dark p-4">
+                                            <h3 class="text-white font-secondary font-weight-normal">Meses</h3>
+                                            <h3 id="meses" class="text-white
+                                                                font-secondary font-weight-normal fs-2">000</h3>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
-                                    <div class="bg-dark p-4">
-                                        <h3 class="text-white font-secondary font-weight-normal">Días</h3>
-                                        <h3 id="dias" class="text-white
-                                                                font-secondary font-weight-normal">000</h3>
+                                    <div class="col-6 col-sm-6 col-lg-2 p-0  border-top border-warning">
+                                        <div class="bg-dark p-4">
+                                            <h3 class="text-white font-secondary font-weight-normal">Días</h3>
+                                            <h3 id="dias" class="text-white
+                                                                font-secondary font-weight-normal fs-2">000</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="box-observed">
-                            <div class="row m-0 mt-0 w-100 justify-content-center appear-right invisible">
-                                <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
-                                    <div class="bg-dark p-4 ">
-                                        <h3 class="text-white font-secondary font-weight-normal">Horas</h3>
-                                        <h3 id="horas" class="text-white
-                                                                font-secondary font-weight-normal">000</h3>
+                            <div class="box-observed">
+                                <div class="row m-0 mt-0 w-100 justify-content-center appear-right invisible">
+                                    <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                        <div class="bg-dark p-4 ">
+                                            <h3 class="text-white font-secondary font-weight-normal">Horas</h3>
+                                            <h3 id="horas" class="text-white
+                                                                font-secondary font-weight-normal fs-2">000</h3>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
-                                    <div class="bg-dark p-4">
-                                        <h3 class="text-white font-secondary font-weight-normal">Minutos</h3>
-                                        <h3 id="minutos" class="text-white
-                                                                font-secondary font-weight-normal">000</h3>
+                                    <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                        <div class="bg-dark p-4">
+                                            <h3 class="text-white font-secondary font-weight-normal">Minutos</h3>
+                                            <h3 id="minutos" class="text-white
+                                                                font-secondary font-weight-normal fs-2">000</h3>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
-                                    <div class="bg-dark p-4">
-                                        <h3 class="text-white font-secondary font-weight-normal">Segundos</h3>
-                                        <h3 id="segundos" class="text-white
-                                                                font-secondary font-weight-normal">000</h3>
+                                    <div class="col-4 col-sm-4 col-lg-2 p-0 border-top border-warning">
+                                        <div class="bg-dark p-4">
+                                            <h3 class="text-white font-secondary font-weight-normal">Segundos</h3>
+                                            <h3 id="segundos" class="text-white
+                                                                font-secondary font-weight-normal fs-2">000</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -165,10 +180,12 @@
             <!-- Fin Seccion de la fecha -->
 
             <!-- Seccion Galeria -->
-            <div class="container-fluid bg-gallery-rym" id="galeria" style="padding: 0 0; margin: 0 0;">
+            <div class="content container py-5 container-fluid bg-gallery-rym" id="galeria"
+                style="padding: 0 0; margin: 0 0;">
+
                 <div class="section-title position-relative text-center" style="margin-bottom: 120px;">
-                    <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Fotos</h6>
-                    <h1 class="font-secondary display-4 text-white">Nuestra Galeria de Fotos</h1>
+                    <!-- <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Fotos</h6> -->
+                    <h1 class="font-secondary display-4 text-white">Galeria de Fotos</h1>
                     <i class="far fa-heart text-white"></i>
                 </div>
                 <div class="owl-carousel gallery-carousel">
@@ -262,14 +279,18 @@
                             <i class="fa fa-2x fa-plus text-white"></i>
                         </a>
                     </div>
+
                 </div>
+                <img class="img-luna" src="https://pngimg.com/uploads/globe/globe_PNG100087.png" alt="">
             </div>
             <!-- Fin Galeria -->
 
             <div class="content" id="padres">
-                <!-- About Start -->
-                <div class="container-fluid py-o mt-5" id="about">
-                    <div class="container py-5">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <!-- Padres Start -->
+                <div class=" container container-fluid py-5 mt-5" id="about">
+                    <div class="">
                         <div class="section-title position-relative text-center">
                             <h1 class="font-secondary display-4 text-white">Nuestros padres</h1>
                             <i class="far fa-heart text-white"></i>
@@ -280,14 +301,11 @@
                                     class="h-100 d-flex flex-column justify-content-center bg-dark p-4 border-top border-warning">
                                     <h3 class="text-white font-secondary font-weight-normal">
                                         Abel Alonso Hernandez
-                                        <i class="fa fa-male text-warning pl-3"></i>
+                                        <!-- <i class="fa fa-male text-warning pl-3"></i> -->
                                     </h3>
                                     <h3 class="text-white font-secondary font-weight-normal">
                                         Angélica Ortega Alegría
-                                        <i class="fa fa-female text-warning pl-3"></i>
-                                    </h3>
-                                    <h3 class="font-secondary font-weight-normal text-muted mb-3">
-                                        Padres de Marlén
+                                        <!-- <i class="fa fa-female text-warning pl-3"></i> -->
                                     </h3>
 
                                 </div>
@@ -297,35 +315,446 @@
                                     class="h-100 d-flex flex-column justify-content-center bg-dark p-4 border-top border-warning">
                                     <h3 class="text-white font-secondary font-weight-normal">
                                         Ricardo Velazquez Santiago
-                                        <i class="fa fa-male text-warning pl-3"></i>
+                                        <!-- <i class="fa fa-male text-warning pl-3"></i> -->
                                     </h3>
                                     <h3 class="text-white font-secondary font-weight-normal">
                                         Olga Sanchez Rivera
-                                        <i class="fa fa-female text-warning pl-3"></i>
+                                        <!-- <i class="fa fa-female text-warning pl-3"></i> -->
                                     </h3>
-                                    <h3 class="font-secondary font-weight-normal text-muted mb-3">
-                                        Padres de Ricardo
-                                    </h3>
+
 
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- About End -->
+            </div>
+            <!-- Misa End -->
 
-                <!-- Encuesta Start -->
-                <div class="container-fluid py-5" id="encuesta">
+
+            <div class="content" id="ceremoniaReligiosa">
+                <img class="img-luna"
+                    src="https://www.freepnglogos.com/uploads/mars-png/mars-interactive-solar-system-13.png" alt="">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <!-- Misa Start -->
+                <div class=" container container-fluid py-5 mt-5" id="about">
+                    <div class="">
+                        <div class="section-title position-relative text-center">
+                            <h1 class="font-secondary display-4 text-white">Misa</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="text-center mb-4 text-white font-secondary">
+                            <h3 class="text-white">A las 02:30 de la tarde</h3>
+                        </div>
+                        <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0 box-observed">
+                            <div class="col-sm-12 col-md-6 
+                                    p-4 text-center text-md-right appear-left invisible d-flex justify-content-end 
+                                    border-top border-right border-bottom">
+                                <div class="bg-warning h-100 border mx-1 d-flex r">
+                                    <img src="https://i.pinimg.com/736x/ec/3a/d7/ec3ad76a004c5a88aabee1157db81b7e.jpg"
+                                        alt="" style="width: 100%; max-width: 300px; object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 
+                                    p-4 d-flex justify-content-end
+                                    text-center text-md-right appear-left invisible 
+                                    border-top border-left border-bottom">
+                                <div class="d-flex w-100">
+                                    <div class="bg-dark border p-3 text-center rounded" style=" width: 100%; max-width:
+                                            400px;">
+                                        <h3 class="text-white
+                                                font-secondary font-weight-normal fs-2">
+                                            Parroquia de San Juan Bautista
+                                        </h3>
+                                        <p class="font-secondary fs-3 m-0">Ubicación: </p>
+                                        <p class=" font-secondary fs-3">Avenida Colón 655, Centro, 73780
+                                            Ciudad
+                                            de Libres, Puebla</p>
+                                        <!-- Boton direccion -->
+                                        <a href="https://maps.app.goo.gl/no8GxkAzndNi4KBs7"><button
+                                                class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                                Maps</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-title position-relative text-center">
+                            <h1 class="font-secondary display-4 text-white">Salón</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="text-center mb-4 text-white font-secondary">
+                            <h3 class="text-white">A las 04:30 de la tarde</h3>
+                        </div>
+                        <div class="row m-0 mb-4 mb-md-0 pb-2 pb-md-0 box-observed">
+                            <div class="col-sm-12 col-md-6 
+                                    p-4 text-center text-md-right appear-left invisible d-flex justify-content-end 
+                                    border-top border-right border-bottom">
+                                <div class="bg-dark h-100 border mx-1 d-flex">
+                                    <img src="./img/el-encanto.png" alt=""
+                                        style="width: 100%; max-width: 300px;object-fit: contain;">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-6 
+                                    p-4 d-flex justify-content-end
+                                    text-center text-md-right appear-left invisible 
+                                    border-top border-left border-bottom">
+                                <div class="d-flex w-100">
+                                    <div class="bg-dark border p-3 text-center rounded" style=" width: 100%; max-width:
+                                            400px;">
+                                        <h3 class="text-white
+                                                font-secondary font-weight-normal fs-2">
+                                            Salón social El Encato
+                                        </h3>
+                                        <p class="font-secondary fs-3 m-0">Ubicacion: </p>
+                                        <p class=" font-secondary fs-3">Calle 6 sur, entre calles 15 y 17 oriente, 73780
+                                            Ciudad
+                                            de Libres, Puebla</p>
+                                        <!-- Boton direccion -->
+                                        <a href="https://maps.app.goo.gl/LP31GdZX4yQJoD4D8"><button
+                                                class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                                Maps</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Itinerario start -->
+            <div class="content" id="itinierario">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <div class=" container container-fluid py-5 mt-4" id="about">
+                    <div class="">
+                        <div class="section-title position-relative text-center">
+                            <h1 class="font-secondary display-4 text-white">Itinerario</h1>
+                            <i class="far fa-heart text-white"></i>
+                        </div>
+                        <div class="row m-0 mb-0 mb-md-0 pb-0 pb-md-0 box-observed">
+                            <!-- Misa -->
+                            <div class="col-sm-6 col-md-6 col-6
+                                    p-2 d-flex justify-content-end
+                                    text-center text-md-left 
+                                    appear-left invisible border-right border-warning">
+                                <div class="w-100">
+                                    <div class=" p-1 text-center d-flex flex-column justify-content-center h-100"
+                                        style=" width: 100%; max-width: 400px; min-height: 100px;">
+                                        <h3 class="text-white
+                                                font-secondary font-weight-normal fs-3 mb-0">
+                                            2:30 pm
+                                        </h3>
+                                        <p class="text-white
+                                                font-secondary font-weight-normal fs-3 mb-0">Misa</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-6
+                                    p-2 d-flex justify-content-end
+                                    text-center text-md-right 
+                                    appear-right invisible 
+                                    ">
+                                <div class="d-flex w-100 justify-content-center">
+                                    <div class="p-1" style=" width: 100%; max-width:
+                                            100px;">
+                                        <img src="./img/icons/church_wedding_icon.svg" class="icon-primary">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Sesión de fotos -->
+                            <div
+                                class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-right appear-right invisible border-right border-warning ">
+                                <div class="d-flex w-100 justify-content-center align-items-center">
+                                    <div class="p-1 text-center" style=" width: 100%; max-width: 70px;">
+                                        <img src="./img/icons/camera_polaroid_icon.svg" class="icon-primary w-100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-6
+                                    p-2 d-flex justify-content-end
+                                    text-center text-md-left 
+                                    appear-left invisible">
+                                <div class="w-100">
+                                    <div class=" p-1 text-center d-flex flex-column justify-content-center h-100"
+                                        style=" width: 100%; max-width: 400px; min-height: 100px;">
+                                        <h3 class="text-white
+                                                font-secondary font-weight-normal fs-3 mb-0">
+                                            3:30 pm
+                                        </h3>
+                                        <p class="text-white
+                                                font-secondary font-weight-normal fs-3 mb-0">Sesión de fotos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Boda civil -->
+                            <div
+                                class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-left appear-left invisible border-right border-warning">
+                                <div class="w-100">
+                                    <div class=" p-1 text-center d-flex flex-column justify-content-center h-100"
+                                        style=" width: 100%; max-width: 400px; min-height: 100px;">
+                                        <h3 class="text-white font-secondary font-weight-normal fs-3 mb-0">
+                                            4:30 pm
+                                        </h3>
+                                        <p class="text-white font-secondary font-weight-normal fs-3 mb-0">
+                                            Recepción</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-right appear-right invisible">
+                                <div class="d-flex w-100 justify-content-center align-items-center">
+                                    <div class="p-1 text-center" style=" width: 100%; max-width: 75px;">
+                                        <img src="./img/icons/wedding-couple.png" class="icon-primary w-100">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Brindis -->
+                            <div
+                                class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-right appear-right invisible border-right border-warning">
+                                <div class="d-flex w-100 justify-content-center align-items-center">
+                                    <div class="p-1 text-center" style=" width: 100%; max-width: 75px;">
+                                        <img src="./img/icons/wine.png" class="icon-primary w-100">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-6
+                                                                    p-2 d-flex justify-content-end
+                                                                    text-center text-md-left 
+                                                                    appear-left invisible">
+                                <div class="w-100">
+                                    <div class=" p-1 text-center d-flex flex-column justify-content-center h-100"
+                                        style=" width: 100%; max-width: 400px; min-height: 100px;">
+                                        <h3
+                                            class="text-white
+                                                                                font-secondary font-weight-normal fs-3 mb-0">
+                                            7:00 pm
+                                        </h3>
+                                        <p
+                                            class="text-white
+                                                                                font-secondary font-weight-normal fs-3 mb-0">
+                                            Pastel y Brindis</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vals -->
+                            <div
+                                class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-left appear-left invisible border-right border-warning">
+                                <div class="w-100">
+                                    <div class=" p-1 text-center d-flex flex-column justify-content-center h-100"
+                                        style=" width: 100%; max-width: 400px; min-height: 100px;">
+                                        <h3 class="text-white font-secondary font-weight-normal fs-3 mb-0">
+                                            8:00 pm
+                                        </h3>
+                                        <p class="text-white font-secondary font-weight-normal fs-3 mb-0">
+                                            Vals</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-right appear-right invisible ">
+                                <div class="d-flex w-100 justify-content-center align-items-center">
+                                    <div class="p-1 text-center" style=" width: 100%; max-width: 75px;">
+                                        <img src="./img/icons/hand-in-hand.png" class="icon-primary w-100">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- itinerario end-->
+            <!-- card para frase -->
+
+            <div class="content" id="frase">
+                <img class="img-luna"
+                    src="https://th.bing.com/th/id/R.3ab61b2566db7a3ea287c84cbe366a83?rik=bQKwFrcwL%2fJJug&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fsun-png-transparent-background-bright-sun-2249.png&ehk=l%2fICUuXcAaLQrYgwIBHs6LxlzPB9gEK2FS9WpoDnsTE%3d&risl=&pid=ImgRaw&r=0"
+                    alt="">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <!-- Frase Start -->
+                <div class=" container container-fluid py-5 mt-3" id="about">
+                    <div class="section-title position-relative text-center">
+                        <h1 class="font-secondary display-4 text-white">Para los invitados</h1>
+                        <i class="far fa-heart text-white"></i>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex justify-content-center">
+                            <img src="./img/icons/chest.png" alt="Vaul" class="icon-primary mb-3"
+                                style="max-width: 60px;">
+                        </div>
+                    </div>
+                    <div class="row m-0 pb-0 box-observed">
+                        <div
+                            class="col-12 p-2 d-flex justify-content-end text-center text-md-right appear-right invisible border-warning">
+                            <div class="p-1">
+                                <p class="kugile-font font-weight-normal fs-5 mb-0 w-100 text-white">
+                                    Queridos amigos y familiares, estamos muy emocionados por compartir este día
+                                    especial con ustedes.
+                                </p>
+                                <p class="kugile-font font-weight-normal fs-5 mb-0 w-100 text-white mt-2">
+                                    Si están pensando en regalarnos algo, preferimos las contribuciones económicas,
+                                    ¡esto nos ayudará a cumplir nuestros
+                                    sueños y crear recuerdos inolvidables juntos!
+                                </p>
+                                <p class="kugile-font font-weight-normal fs-5 mb-0 w-100 text-white mt-2">
+                                    Habrá un baúl donde podrán dejar su contribución en un sobre
+                                </p>
+                                <p class="kugile-font font-weight-normal fs-4 mb-0 w-100 text-white mt-2">
+                                    ¡Gracias por ser parte de nuestro
+                                    sueño!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sugerencias de hotel -->
+            <div class="content" id="sugerenciasHotel">
+                <img class="img-luna"
+                    src="https://static.vecteezy.com/system/resources/previews/020/922/023/original/isolated-realistic-neptune-illustration-png.png"
+                    alt="">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <!-- Padres Start -->
+                <div class=" container container-fluid py-5 mt-3" id="about">
+                    <div class="section-title position-relative text-center">
+                        <h1 class="font-secondary display-4 text-white">Sugerencias de hotel</h1>
+                        <i class="far fa-heart text-white"></i>
+                    </div>
+                    <div class="row m-0 pb-0 box-observed">
+                        <div
+                            class="col-12 col-md-6 col-lg-4 p-2 d-flex flex-column justify-content-center align-items-center text-center text-md-right appear-right invisible border-warning ">
+                            <h3 class="font-secondary fs-2 text-white pt-4"> Hotel Villa de Libres</h3>
+                            <img src="./img/villa-libres.avif" alt="Hotel 1" class="w-100 rounded border border-warning"
+                                style="max-width: 300px; object-fit: cover; aspect-ratio: 1;">
+                            <h3 class="font-secondary text-white pt-4"> Av. Manuel, Av. Ávila Camacho 68, Tetela</h3>
+                            <h3 class="font-secondary text-white pt-4">Tel: <a class="text-warning"
+                                    href="tel:2764730907">2764730907</a></h3>
+                            <a href="https://maps.app.goo.gl/crqYij6YuvuiGUwX8"><button
+                                    class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                    Maps</button></a>
+                        </div>
+                        <div
+                            class="col-12 col-md-6 col-lg-4 p-2 d-flex flex-column justify-content-center align-items-center text-center text-md-right appear-right invisible border-warning ">
+                            <h3 class="font-secondary fs-2 text-white pt-4"> Hotel La Cantera</h3>
+                            <img src="./img/la-cantera.png" alt="Hotel 2" class="w-100 rounded border border-warning"
+                                style="max-width: 300px;object-fit: cover; aspect-ratio: 1;">
+                            <h3 class="font-secondary text-white pt-4">Av. 16 de Septiembre 960, Centro</h3>
+                            <h3 class="font-secondary text-white pt-4">Tel: <a class="text-warning"
+                                    href="tel:2766902084">2766902084</a></h3>
+                            <a href="https://maps.app.goo.gl/GBn8vTxemNPr7Urf9"><button
+                                    class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                    Maps</button></a>
+                        </div>
+                        <div
+                            class="col-12 col-md-6 col-lg-4 p-2 d-flex flex-column justify-content-center align-items-center text-center text-md-right appear-right invisible border-warning ">
+                            <h3 class="font-secondary fs-2 text-white pt-4"> Hotel San Manuel</h3>
+                            <img src="./img/san-manuel.jpg" alt="Hotel 2" class="w-100 rounded border border-warning"
+                                style="max-width: 300px;object-fit: cover; aspect-ratio: 1;">
+                            <h3 class="font-secondary text-white pt-4">Escobedo LB, Tetela</h3>
+                            <a href="https://maps.app.goo.gl/EYtcW2RVnUCMNnWx9"><button
+                                    class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                    Maps</button></a>
+                        </div>
+                        <div
+                            class="col-12 col-md-6 col-lg-4 p-2 d-flex flex-column justify-content-center align-items-center text-center text-md-right appear-right invisible border-warning ">
+                            <h3 class="font-secondary fs-2 text-white pt-4"> Hotel Victoria</h3>
+                            <img src="./img/victoria.jfif" alt="Hotel 2" class="w-100 rounded border border-warning"
+                                style="max-width: 300px;object-fit: cover; aspect-ratio: 1;">
+                            <h3 class="font-secondary text-white pt-4">Calle 3 Ote. 896, Barrio de Guadalupe</h3>
+                            <h3 class="font-secondary text-white pt-4">Tel: <a class="text-warning"
+                                    href="tel:2761024736">2761024736</a></h3>
+                            <a href="https://maps.app.goo.gl/NC1ybKwyzpg5SR2M9"><button
+                                    class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                    Maps</button></a>
+                        </div>
+                        <div
+                            class="col-12 col-md-6 col-lg-4 p-2 d-flex flex-column justify-content-center align-items-center text-center text-md-right appear-right invisible border-warning ">
+                            <h3 class="font-secondary fs-2 text-white pt-4"> Hotel Komod</h3>
+                            <img src="./img/komod.jfif" alt="Hotel 2" class="w-100 rounded border border-warning"
+                                style="max-width: 300px;object-fit: cover; aspect-ratio: 1;">
+                            <h3 class="font-secondary text-white pt-4">Av. 16 de Septiembre 1055, Centro, Barrio de
+                                Guadalupe</h3>
+                            <h3 class="font-secondary text-white pt-4">Tel: <a class="text-warning"
+                                    href="tel:2228312472">2228312472</a></h3>
+                            <a href="https://maps.app.goo.gl/RRV833xdVjvdjTBB7"><button
+                                    class="btn btn-warning font-weight-bold py-3 px-5" type="submit">Ver en
+                                    Maps</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seccion de vestimenta -->
+            <div class="content" id="vestimenta">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <!-- <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt=""> -->
+                <!-- Padres Start -->
+                <div class=" container container-fluid py-5 mt-5" id="about">
+                    <div class="section-title position-relative text-center">
+                        <h1 class="font-secondary display-4 text-white">Código de vestimenta</h1>
+                        <i class="far fa-heart text-white"></i>
+                    </div>
+                    <!-- Codigo -->
+                    <div class="row m-0 pb-0 box-observed">
+                        <div
+                            class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-end text-center text-md-right appear-right invisible border-right border-bottom border-warning">
+                            <div class="d-flex w-100 justify-content-center align-items-center">
+                                <div class="p-1 text-center" style="width: 100%; max-width: 100px;">
+                                    <img src="./img/icons/dress.png" class="icon-primary w-100">
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-sm-6 col-md-6 col-6 p-2 d-flex justify-content-center text-center text-md-left border-bottom border-warning appear-left invisible">
+                            <div class="p-1 text-center" style="width: 100%; max-width: 100px;">
+                                <img src="./img/icons/suit.png" class="icon-primary w-100">
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="p-1 text-center d-flex flex-column justify-content-center h-100"
+                                style="width: 100%; max-width: 400px; min-height: 100px;">
+                                <h3 class="text-white font-secondary font-weight-normal fs-3 mb-0 w-100">
+                                    Formal
+                                </h3>
+                                <p class="text-white
+                                    font-secondary font-weight-normal fs-3 mb-0">Vestido y Traje</p>
+                                <p class="text-white font-secondary fs-5">Colores Blanco, Beige y Azul marino son
+                                    exclusivos para
+                                    los novios</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Encuesta Start -->
+            <div class="">
+                <img src="https://cdn.create.vista.com/api/media/medium/198502382/stock-photo-abstract-black-background-violet-steam?token="
+                    class="img-background opacity-30 blur-5" alt="">
+                <div class=" container-fluid py-5" id="encuesta">
+
                     <div class="container py-5">
                         <div class="section-title position-relative text-center">
-                            <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Encuesta</h6>
-                            <h1 class="font-secondary text-white display-4">Necesitamos tu confirmación</h1>
+                            <h6 class="text-uppercase text-warning mb-3" style="letter-spacing: 3px;">Encuesta
+                            </h6>
+                            <h1 class="font-secondary text-white display-4">Necesitamos tu
+                                confirmación</h1>
                             <i class="far fa-heart text-white"></i>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="text-center">
-                                    <form>
+                                    <form id="formulario">
                                         <div class="form-row">
                                             <div class="form-group col-sm-6">
                                                 <input type="text"
@@ -343,10 +772,14 @@
                                                 <select class="form-control bg-dark border-0 text-white"
                                                     style="height: 52px;" name="asistencia" id="asistencia" required
                                                     onchange="onAsistenciaChange()">
-                                                    <option value="" selected disabled>Selecciona una opción</option>
+                                                    <option value="" selected disabled>
+                                                        Selecciona una opción
+                                                    </option>
                                                     <option value="asistire">Asistiré</option>
-                                                    <option value="no-asistire">No asistiré</option>
-                                                    <option value="aun-no-se">Aún no lo sé</option>
+                                                    <option value="no-asistire">No asistiré
+                                                    </option>
+                                                    <option value="aun-no-se">Aún no lo sé
+                                                    </option>
                                                 </select>
                                             </div>
                                         </div>
@@ -355,8 +788,11 @@
                                             <div class="form-row">
                                                 <div class="form-group col-sm-12">
                                                     <select class="form-control bg-dark border-0 text-white"
-                                                        style="height: 52px;" name="acompanantes" required>
-                                                        <option value="" selected disabled>Numero de acompañantes
+                                                        style="height: 52px;" id="acompanantes" name="acompanantes"
+                                                        required>
+                                                        <option value="" selected disabled>
+                                                            Numero de
+                                                            acompañantes
                                                         </option>
                                                         <option value="0">0</option>
                                                         <option value="1">1</option>
@@ -371,8 +807,11 @@
                                             <div class="form-row">
                                                 <div class="form-group col-sm-12 col-lg-6">
                                                     <select class="form-control bg-dark border-0 text-white"
-                                                        style="height: 52px;" name="generoMusical" required>
-                                                        <option value="" selected disabled>Genero musical preferido
+                                                        style="height: 52px;" id="generoMusical" name="generoMusical"
+                                                        required>
+                                                        <option value="" selected disabled>
+                                                            Genero musical
+                                                            preferido
                                                         </option>
                                                         <option value="salsa">Salsa</option>
                                                         <option value="cumbia">Cumbia</option>
@@ -384,8 +823,10 @@
                                                 </div>
                                                 <div class="form-group col-sm-12 col-lg-6">
                                                     <select class="form-control bg-dark border-0 text-white"
-                                                        style="height: 52px;" name="bebidaPreferencia" required>
-                                                        <option value="" selected disabled>Bebida de preferencia
+                                                        style="height: 52px;" id="bebidaPreferencia"
+                                                        name="bebidaPreferencia" required>
+                                                        <option value="" selected disabled>
+                                                            Bebida de preferencia
                                                         </option>
                                                         <option value="tequila">Tequila</option>
                                                         <option value="whisky">Whisky</option>
@@ -398,8 +839,8 @@
                                             </div>
                                             <div class="form-group">
                                                 <textarea class="form-control bg-dark border-0 py-2 px-3 text-white"
-                                                    rows="5" placeholder="Algún mensaje para nosotros" name="mensaje"
-                                                    required></textarea>
+                                                    rows="5" placeholder="Algún Mensaje para los novios" id="mensaje"
+                                                    name="mensaje" required></textarea>
                                             </div>
                                         </div>
                                         <div class="form-row" id="recordatorio" style="display: none;">
@@ -416,8 +857,8 @@
                                             </div>
                                         </div>
                                         <div>
-                                            <button class="btn btn-warning font-weight-bold py-3 px-5"
-                                                type="submit">Enviar</button>
+                                            <button class="btn btn-warning font-weight-bold py-3 px-5" type="submit"
+                                                id="guardar">Enviar</button>
                                         </div>
                                     </form>
                                 </div>
@@ -425,42 +866,46 @@
                         </div>
                     </div>
                 </div>
-                <!-- Encuesta End -->
-
-                <!-- Footer Start -->
-                <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
-                    <div class="container text-center py-5">
-                        <div class="section-title position-relative text-center">
-                            <h1 class="font-secondary display-3 text-white">¡Gracias!</h1>
-                            <i class="far fa-heart text-white"></i>
-                        </div>
-                        <div class="d-flex justify-content-center mb-4">
-                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
-                                href="https://www.facebook.com/jesusemanuel.salgadolezama"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
-                                href="https://www.linkedin.com/in/jesús-emanuel-salgado-lezama-2224b5193"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-lg btn-outline-light btn-lg-square"
-                                href="https://www.instagram.com/jesus1530?igsh=dXA5bHBuaXoxMmZl"><i
-                                    class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="d-flex justify-content-center py-2">
-                            <a class="text-warning"
-                                href="mailto:jesus_emanuel_live@hotmail.com">jesus_emanuel_live@hotmail.com</a>
-                            <span class="px-3">|</span>
-                            <a class="text-warning" href="tel:221439360">221439360</a>
-                        </div>
-                        <p class="m-0">&copy; <a class="text-warning"
-                                href="https://jesus15300.github.io/curriculum-vitae/">Jesus153</a>. hecho por <a
-                                class="text-warning" href="https://jesus15300.github.io/curriculum-vitae/">Jesus Emanuel
-                                Salgado Lezama</a>
-                        </p>
-                    </div>
-                </div>
-                <!-- Footer End -->
             </div>
+            <!-- Encuesta End -->
+
+            <!-- Footer Start -->
+            <div class="container-fluid bg-dark text-white py-5" id="contact" style="margin-top: 90px;">
+                <div class="container text-center py-5">
+                    <div class="section-title position-relative text-center">
+                        <h1 class="font-secondary display-3 text-white">¡Gracias!</h1>
+                        <i class="far fa-heart text-white"></i>
+                    </div>
+                    <div class="d-flex justify-content-center mb-4">
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
+                            href="https://www.facebook.com/jesusemanuel.salgadolezama"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-outline-light btn-lg-square mr-2"
+                            href="https://www.linkedin.com/in/jesús-emanuel-salgado-lezama-2224b5193"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-outline-light btn-lg-square"
+                            href="https://www.instagram.com/jesus1530?igsh=dXA5bHBuaXoxMmZl"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="d-flex justify-content-center py-2">
+                        <a class="text-warning"
+                            href="mailto:jesus_emanuel_live@hotmail.com">jesus_emanuel_live@hotmail.com</a>
+                        <span class="px-3">|</span>
+                        <a class="text-warning" href="tel:2214394360">2214394360</a>
+                    </div>
+                    <p class="m-0">&copy; <a class="text-warning"
+                            href="https://jesus15300.github.io/curriculum-vitae/">Jesus153</a>.
+                        hecho por <a class="text-warning" href="https://jesus15300.github.io/curriculum-vitae/">Jesus
+                            Emanuel
+                            Salgado Lezama</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Footer End -->
         </div>
+
+    </div>
+    </div>
     </div>
 
     <!-- Back to Top -->
@@ -482,11 +927,16 @@
 
     <!-- Fin Recursos Js invitacion Boda -->
 </body>
+
+<script src="./js/constantes.js"></script>
 <script src="./js/visibility-observer.js"></script>
 <script src="./js/stars/stars-behaviour.js"></script>
 <script src="./js/contador.js"></script>
 <script src="./js/formulario.js"></script>
+<script src="./js/audio-controller.js"></script>
 <script src="./js/main.js"></script>
+<script src="./js/visita-service.js"></script>
+
 
 
 </html>

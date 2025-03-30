@@ -1,15 +1,15 @@
 @font-face {
     font-family: kugile;
     /* src: url(../fonts/bubble_water/BubbleGreen.otf); */
-    src: url(/resources/kugile/Kugile_Demo.ttf);
+    src: url(../../resources/fonts/kugile/Kugile_Demo.ttf);
 }
 
 .kugile-font {
     font-family: 'kugile', 'roboto', sans-serif;
 }
 
-body {
+/* body {
     font-family: 'kugile', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-}
+} */
