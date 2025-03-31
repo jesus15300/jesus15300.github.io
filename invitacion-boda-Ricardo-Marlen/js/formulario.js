@@ -3,7 +3,7 @@ function onAsistenciaChange() {
     var asistencia = document.getElementById("asistencia").value;
     console.log(asistencia);
 
-    if (asistencia == "asistire") {
+    if (asistencia == "CONFIRMADO") {
         document.getElementById("asistencia-si").style.display = "block";
         document.getElementById("recordatorio").style.display = "block";
         document.getElementById("acompanantes").disabled = false;
@@ -11,7 +11,7 @@ function onAsistenciaChange() {
         document.getElementById("bebidaPreferencia").disabled = false;
         document.getElementById("mensaje").disabled = false;
     }
-    else if (asistencia == "no-asistire") {
+    else if (asistencia == "RECHAZADO") {
         document.getElementById("asistencia-si").style.display = "none";
         document.getElementById("recordatorio").style.display = "none";
         //poner todos los campos en disabled
@@ -22,7 +22,7 @@ function onAsistenciaChange() {
 
         // document.getElementById("asistencia-no").style.display = "block";
     }
-    else if (asistencia == "aun-no-se") {
+    else if (asistencia == "DUDOSO") {
         document.getElementById("asistencia-si").style.display = "none";
         document.getElementById("recordatorio").style.display = "block";
         // document.getElementById("asistencia-no").style.display = "block";
@@ -44,7 +44,7 @@ form.addEventListener("submit", function guardarFormulario(event) {
     event.preventDefault();
     btnConfirmar.disabled = true;
     btnConfirmar.textContent = 'Enviando...';
-    if (localStorage.getItem('confirmacion')) {
+    if (false){//localStorage.getItem('confirmacion' + idInvitacion)) {
         alert('Ya has confirmado tu asistencia, gracias :)');
         btnConfirmar.disabled = false;
         btnConfirmar.textContent = 'Confirmar';
@@ -72,35 +72,31 @@ form.addEventListener("submit", function guardarFormulario(event) {
         }
 
     ];
+    preguntas = preguntas.filter(p => p.respuesta != null);
 
-    let idVisita = window.localStorage.getItem('visita');
+    let idVisita = window.localStorage.getItem('visita' + idInvitacion);
     if (idVisita) {
         data.idVisita = idVisita;
     } else {
-        console.error('No se encontró el ID de visita en localStorage.');
+        // console.error('Por favor vuelve a cargar la pagina antes de volver a intentar');
+
+        alert('Por favor vuelve a cargar la pagina antes de volver a intentar');
+        btnConfirmar.disabled = false;
+        btnConfirmar.textContent = 'Enviar';
         return;
     }
 
-    switch (data.asistencia) {
-        case "asistire":
-            let body = {
-                idInvitacion: idInvitacion,
-                acompanantes: data.acompanantes,
-                nombre: data.nombre,
-                email: data.email,
-                recibirRecordatorio: data.recibirRecordatorio == "on" ? true : false,
-                respuestas: preguntas,
-                idVisitaPagina: idVisita,
-            }
-            confirmarAsistencia(body);
-            break;
-        case "no-asistire":
-            rechazarAsistencia(data);
-            break;
-        case "aun-no-se":
-            guardarPendiente(data);
-            break;
+    let body = {
+        idInvitacion: idInvitacion,
+        acompanantes: data.acompanantes,
+        nombre: data.nombre,
+        email: data.email,
+        recibirRecordatorio: data.recibirRecordatorio == "on" && data.asistencia != 'RECHAZADO' ? true : false,
+        respuestas: preguntas,
+        idVisitaPagina: idVisita,
+        estado: data.asistencia
     }
+    confirmarAsistencia(body);
 });
 
 async function confirmarAsistencia(data) {
@@ -133,9 +129,5 @@ async function confirmarAsistencia(data) {
     btnConfirmar.textContent = 'Enviar';
 };
 
-function rechazarAsistencia(data) {
-    console.log('rechazarAsistencia', data);
-    alert('Gracias por informarnos que no asistirás a la boda.');
-}
 
 

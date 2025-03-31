@@ -8,8 +8,8 @@ const browserInfo = {
   cookieEnabled: navigator.cookieEnabled,
   idVisita: -1
 };
-if (window.localStorage.getItem('visita')) {
-  const visita = window.localStorage.getItem('visita');
+if (window.localStorage.getItem('visita' + idInvitacion)) {
+  const visita = window.localStorage.getItem('visita' + idInvitacion);
   browserInfo.idVisita = visita;
 }
 console.log(browserInfo);
@@ -33,7 +33,7 @@ async function registrarVisita() {
         const result = await response.json();
 
         console.log('Visita guardada: ' + JSON.stringify(result));
-        window.localStorage.setItem('visita', result.id);
+        window.localStorage.setItem('visita' + idInvitacion, result.id);
         return;
       }
       console.log('Visita actualizada correctamente');
