@@ -6,8 +6,14 @@ const browserInfo = {
   language: navigator.language,
   languages: navigator.languages,
   cookieEnabled: navigator.cookieEnabled,
+  idVisita: -1
 };
+if (window.localStorage.getItem('visita' + idInvitacion)) {
+  const visita = window.localStorage.getItem('visita' + idInvitacion);
+  browserInfo.idVisita = visita;
+}
 console.log(browserInfo);
+
 registrarVisita();
 async function registrarVisita() {
   try {
@@ -22,8 +28,15 @@ async function registrarVisita() {
     });
 
     if (response.ok) {
-      const result = await response.json();
-      console.log('Visita guardada: ' + JSON.stringify(result));
+      if (response.status === 201) {
+        console.log('Visita registrada correctamente');
+        const result = await response.json();
+
+        console.log('Visita guardada: ' + JSON.stringify(result));
+        window.localStorage.setItem('visita' + idInvitacion, result.id);
+        return;
+      }
+      console.log('Visita actualizada correctamente');
     } else {
       //   alert('Error al enviar el formulario.');
     }
