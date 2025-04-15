@@ -44,7 +44,7 @@ form.addEventListener("submit", function guardarFormulario(event) {
     event.preventDefault();
     btnConfirmar.disabled = true;
     btnConfirmar.textContent = 'Enviando...';
-    if (false){//localStorage.getItem('confirmacion' + idInvitacion)) {
+    if (false) {//localStorage.getItem('confirmacion' + idInvitacion)) {
         alert('Ya has confirmado tu asistencia, gracias :)');
         btnConfirmar.disabled = false;
         btnConfirmar.textContent = 'Confirmar';
@@ -117,6 +117,7 @@ async function confirmarAsistencia(data) {
             alert('Confirmacion enviada, gracias por confirmar tu asistencia :)');
             localStorage.setItem('confirmacion' + idInvitacion, JSON.stringify(data));
 
+            hayConfirmacion();
 
         } else {
             alert('Error al confirmar la asistencia.');
@@ -128,6 +129,14 @@ async function confirmarAsistencia(data) {
     btnConfirmar.disabled = false;
     btnConfirmar.textContent = 'Enviar';
 };
+hayConfirmacion();
+async function hayConfirmacion() {
+    let idVisita = window.localStorage.getItem('confirmacion' + idInvitacion);
+    if (idVisita) {
+        const mensaje = document.getElementById("mensajeAsistenciaConfirmada");
+        mensaje.style.display = "flex";
+    }
+}
 
 
 
