@@ -751,13 +751,21 @@
                                 confirmación</h1>
                             <i class="far fa-heart text-white"></i>
                         </div>
-                        <div class="row justify-content-center" style="display: none;" id="mensajeAsistenciaConfirmada">
+
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="alert alert-success" role="alert">
+                                    Este evento ya finalizó, muchas gracias por tu asistencia :)
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row justify-content-center" style="display: none;" id="mensajeAsistenciaConfirmada">
                             <div class="col-lg-8">
                                 <div class="alert alert-warning" role="alert">
                                     Ya has confirmado tu asistencia, aun puedes modificar tu respuesta.
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="text-center">
@@ -861,7 +869,7 @@
                                         </div>
                                         <div>
                                             <button class="btn btn-warning font-weight-bold py-3 px-5" type="submit"
-                                                id="guardar">Enviar</button>
+                                                id="guardar" disabled>Enviar</button>
                                         </div>
                                     </form>
                                 </div>
